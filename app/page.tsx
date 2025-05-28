@@ -22,7 +22,7 @@ export default function Home() {
 
 interface NavItemProps {
   href: string;
-  label: string;
+  title: string;
 }
 
 function HoverCard({ href, title }: NavItemProps) {
