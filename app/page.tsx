@@ -20,7 +20,12 @@ export default function Home() {
   );
 }
 
-function HoverCard({ href, title }) {
+interface NavItemProps {
+  href: string;
+  label: string;
+}
+
+function HoverCard({ href, title }: NavItemProps) {
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <Link
