@@ -9,7 +9,7 @@ export default function Home() {
       <div className="md:w-1/2 w-full flex flex-col justify-center items-center text-center px-6 space-y-8">
         <h1 className="text-4xl font-bold">Veena Vijayakumar</h1>
         <p className="text-lg text-gray-300 max-w-md">
-          This is not just a portfolio — it’s a digital space to express myself with free will.  
+          This is not just a portfolio — it’s a digital space to express myself with free will.
           A living archive of realizations, reflections, and constant transformation.
         </p>
 
@@ -30,15 +30,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Right Side: Full Height Profile Image */}
+      {/* Right Side */}
       <div className="md:w-1/2 w-full h-1/2 md:h-full relative">
         <Image
           src="/profile.png"
           alt="Veena's profile"
-          layout="fill"
-          objectFit="cover"
-          priority
+          fill
           className="object-cover"
+          priority
         />
       </div>
     </main>
