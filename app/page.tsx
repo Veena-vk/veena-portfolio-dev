@@ -21,11 +21,11 @@ export default function Home() {
             This is not just a portfolio — it's a digital space to express myself with free will.  
             A living archive of realizations, reflections, and constant transformation.
           </p>
-
+        </div>
           {/* Icons with Labels */}
          <div className="flex gap-10 text-white text-center">
          <div className="flex flex-col items-center">
-         <Link href="/sun" className="text-3xl hover:scale-110 transition-transform"☀️</Link>
+         <Link href="/sun" className="text-3xl hover:scale-110 transition-transform">☀️</Link>
    	 <span className="text-sm mt-1 text-gray-400">Professional</span>
  	 </div>
  	 <div className="flex flex-col items-center">
