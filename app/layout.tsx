@@ -1,17 +1,24 @@
-// File: app/layout.tsx
-import { ReactNode } from 'react';
+import "./globals.css"; // Tailwind styles
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-interface LayoutProps {
-  children: ReactNode;
-}
+const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({ children }: LayoutProps) {
+export const metadata: Metadata = {
+  title: "Veena's Universe",
+  description: "Not just a portfolio – a space of expression and growth.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="bg-white text-black dark:bg-zinc-900 dark:text-white font-sans">
+      <body className={`${inter.className} bg-black text-white relative overflow-hidden`}>
         {children}
       </body>
     </html>
   );
 }
-
