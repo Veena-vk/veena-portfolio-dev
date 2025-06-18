@@ -1,73 +1,45 @@
-"use client";
+'use client'
 
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
-      <div className="flex flex-col-reverse md:flex-row items-center max-w-6xl w-full">
-        {/* Text Block */}
-        <div className="md:w-1/2 space-y-6 text-center md:text-left">
-          <h1 className="text-3xl md:text-4xl font-bold">Veena Vijayakumar</h1>
-          <p className="text-lg text-gray-300">
-            It’s a digital space where I express myself with complete freedom — a collection of thoughts,
-            experiments, failures, philosophies, and evolving goals.
-            <br /><br />
-            I made this to document my journey of realizations, constant change, and slow improvements —
-            both technical and personal.
-            <br /><br />
-            Welcome to the layers of my mind.
-          </p>
-        </div>
+    <main className="h-screen flex flex-col md:flex-row bg-black text-white">
+      {/* Left Side */}
+      <div className="md:w-1/2 w-full flex flex-col justify-center items-center text-center px-6 space-y-8">
+        <h1 className="text-4xl font-bold">Veena Vijayakumar</h1>
+        <p className="text-lg text-gray-300 max-w-md">
+          This is not just a portfolio — it’s a digital space to express myself with free will.  
+          A living archive of realizations, reflections, and constant transformation.
+        </p>
 
-        {/* Image Block */}
-        <div className="md:w-1/2 flex justify-center mb-8 md:mb-0">
-        <div className="rounded-lg overflow-hidden">
-          <Image
-             src="/profile.png"
-             alt="Veena's profile"
-             width={300}
-             height={400}
-             className="object-cover"
-             priority
-          />
-       </div>
-       </div>
+        {/* Icons with Labels */}
+        <div className="flex gap-10 text-white text-center">
+          <div className="flex flex-col items-center">
+            <button className="text-3xl hover:scale-110 transition-transform"☀️</button>
+            <span className="text-sm mt-1 text-gray-400">Professional</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <button className="text-3xl hover:scale-110 transition-transform">🌙</button>
+            <span className="text-sm mt-1 text-gray-400">Creative</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <button className="text-3xl hover:scale-110 transition-transform">🌍</button>
+            <span className="text-sm mt-1 text-gray-400">Intersections</span>
+          </div>
+        </div>
       </div>
 
-      {/* Triangle Icon Menu */}
-      <div className="relative w-64 h-64 mt-12">
-        {/* Sun */}
-        <Link href="/sun">
-          <motion.div
-            whileHover={{ scale: 1.1, boxShadow: "0 0 20px #facc15" }}
-            className="absolute top-0 left-1/2 transform -translate-x-1/2 text-4xl cursor-pointer"
-          >
-           ☀️
-          </motion.div>
-        </Link>
-
-        {/* Moon */}
-        <Link href="/moon">
-          <motion.div
-            whileHover={{ scale: 1.1, boxShadow: "0 0 20px #93c5fd" }}
-            className="absolute bottom-0 left-0 text-4xl cursor-pointer"
-          >
-            🌙
-          </motion.div>
-        </Link>
-
-        {/* Earth */}
-        <Link href="/earth">
-          <motion.div
-            whileHover={{ scale: 1.1, boxShadow: "0 0 20px #6ee7b7" }}
-            className="absolute bottom-0 right-0 text-4xl cursor-pointer"
-          >
-            🌍
-          </motion.div>
-        </Link>
+      {/* Right Side: Full Height Profile Image */}
+      <div className="md:w-1/2 w-full h-1/2 md:h-full relative">
+        <Image
+          src="/profile.png" // Make sure this is in your /public folder
+          alt="Veena's profile"
+          layout="fill"
+          objectFit="cover"
+          priority
+          className="object-cover"
+        />
       </div>
     </main>
   );
