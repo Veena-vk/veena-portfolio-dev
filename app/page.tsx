@@ -33,7 +33,7 @@ export default function Home() {
       {/* Right Side: Full Height Profile Image */}
       <div className="md:w-1/2 w-full h-1/2 md:h-full relative">
         <Image
-          src="/profile.png" // Make sure this is in your /public folder
+          src="/profile.png"
           alt="Veena's profile"
           layout="fill"
           objectFit="cover"
