@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="h-screen flex flex-col md:flex-row bg-black text-white">
+    <main className ="h-screen flex flex-col md:flex-row bg-black text-white">
       {/* Left Side */}
       <div className="md:w-1/2 w-full flex flex-col justify-center items-center text-center px-6 space-y-8">
         <h1 className="text-4xl font-bold">Veena Vijayakumar</h1>
