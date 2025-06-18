@@ -10,7 +10,7 @@ export default function Home() {
       <div className="flex flex-col-reverse md:flex-row items-center max-w-6xl w-full">
         {/* Text Block */}
         <div className="md:w-1/2 space-y-6 text-center md:text-left">
-          <h1 className="text-3xl md:text-4xl font-bold">This isn’t just a portfolio.</h1>
+          <h1 className="text-3xl md:text-4xl font-bold">Veena Vijayakumar</h1>
           <p className="text-lg text-gray-300">
             It’s a digital space where I express myself with complete freedom — a collection of thoughts,
             experiments, failures, philosophies, and evolving goals.
