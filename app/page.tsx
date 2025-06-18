@@ -24,17 +24,17 @@ export default function Home() {
 
         {/* Image Block */}
         <div className="md:w-1/2 flex justify-center mb-8 md:mb-0">
-          <div className="rounded-lg overflow-hidden border-4 border-gray-700 shadow-lg">
-            <Image
-              src="/profile.png"
-              alt="Veena's profile"
-              width={300}
-              height={400}
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
+        <div className="rounded-lg overflow-hidden">
+          <Image
+             src="/profile.png"
+             alt="Veena's profile"
+             width={300}
+             height={400}
+             className="object-cover"
+             priority
+          />
+       </div>
+       </div>
       </div>
 
       {/* Triangle Icon Menu */}
