@@ -39,7 +39,7 @@ export default function Home() {
 	</div>
 
         {/* Right Side with Full-Stretch Profile Image */}
-        <div className="md:w-1/2 w-full h-64 md:h-full relative">
+        <div className="hidden md:block md:w-1/2 w-full h-64 md:h-full relative">
           <Image
             src="/profile.png"
             alt="Veena's profile"
