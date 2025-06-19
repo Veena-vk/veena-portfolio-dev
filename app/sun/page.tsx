@@ -1,3 +1,6 @@
+'use client';
+
+
 import Intro from './components/Intro';
 import Education from './components/Education';
 import Experience from './components/Experience';

@@ -26,15 +26,15 @@ export default function Home() {
          <div className="flex gap-10 text-white text-center">
          <div className="flex flex-col items-center">
          <Link href="/sun" className="text-3xl hover:scale-110 transition-transform">☀️</Link>
-   	 <span className="text-sm mt-1 text-gray-400">Professional</span>
+   	 <span className="text-sm mt-1 text-gray-400">Radiance</span>
  	 </div>
  	 <div className="flex flex-col items-center">
  	   <Link href="/moon" className="text-3xl hover:scale-110 transition-transform">🌙</Link>
-  	  <span className="text-sm mt-1 text-gray-400">Creative</span>
+  	  <span className="text-sm mt-1 text-gray-400">Reflections</span>
 	  </div>
 	  <div className="flex flex-col items-center">
  	   <Link href="/earth" className="text-3xl hover:scale-110 transition-transform">🌍</Link>
- 	   <span className="text-sm mt-1 text-gray-400">Intersections</span>
+ 	   <span className="text-sm mt-1 text-gray-400">Retrospections</span>
 	  </div>
 	</div>
 

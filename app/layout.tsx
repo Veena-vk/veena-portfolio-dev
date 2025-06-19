@@ -33,13 +33,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               🏠 Home
             </Link>
             <Link href="/sun" onClick={() => setMenuOpen(false)} className="text-xl hover:text-yellow-400">
-              ☀️ Professional
+              ☀️ Profession
             </Link>
             <Link href="/moon" onClick={() => setMenuOpen(false)} className="text-xl hover:text-yellow-400">
-              🌙 Creative
+              🌙 Arts and Passion
             </Link>
             <Link href="/earth" onClick={() => setMenuOpen(false)} className="text-xl hover:text-yellow-400">
-              🌍 Intersections
+              🌍 Crossroads
             </Link>
           </div>
         </div>
