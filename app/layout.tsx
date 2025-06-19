@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Slide-Out Menu */}
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-black bg-opacity-95 border-l border-gray-700 z-40 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 right-0 h-full w-64 bg-black bg-opacity-95 border-l border-gray-700 z-50 transform transition-transform duration-300 ease-in-out ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
