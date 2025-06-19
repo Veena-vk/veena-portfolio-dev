@@ -29,8 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }`}
         >
           <div className="flex flex-col p-6 space-y-6">
-            <Link href="/" passHref onClick={() => setMenuOpen(false)}>
-  		<span className="text-xl hover:text-yellow-400">🏠 Home</span>
+            <Link href="/" onClick={() => setMenuOpen(false)}  className="text-xl hover:text-yellow-400">
+               🏠 Home
 	    </Link>
             <Link href="/sun" onClick={() => setMenuOpen(false)} className="text-xl hover:text-yellow-400">
               ☀️ Profession
