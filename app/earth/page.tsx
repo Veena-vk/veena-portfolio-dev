@@ -1,10 +1,14 @@
 // app/earth/page.tsx or pages/earth.tsx
 import EarthBackground from "./components/EarthBackground";
+import EarthFloatingLayer from "./components/EarthFloatingLayer";
+import EarthImageDebris from "./components/EarthImageDebris";
 
 export default function Earth() {
   return (
     <div className="relative min-h-screen text-white overflow-x-hidden">
       <EarthBackground />
+      <EarthFloatingLayer />
+      <EarthImageDebris />
       <div className="relative z-10 p-8 space-y-16">
         <h1 className="text-4xl font-bold">🌍 The Earth Corner</h1>
 
