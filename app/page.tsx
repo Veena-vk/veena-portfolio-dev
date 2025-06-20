@@ -17,23 +17,20 @@ export default function Home() {
 
         {/* Left Side */}
         <div className="md:w-1/2 w-full flex flex-col justify-center items-center text-center px-6 space-y-8">
-          <p className="text-lg text-gray-300 max-w-md">
-            Hello, and thanks for stopping by.
-		This is a glimpse into who I am—not to flaunt, but to record. Much of it may sound universal or even redundant. But I believe a complex human brain deserves to occupy a few hundred megabytes of internet space.
-
-		To the recruiters—if you're here, I assume you're looking for more than just a resume. Not a mere work engine, but a personality to add to your team.
-
-		My world unfolds in three parts:
-
-		Sun – My professional arena, where I shine from 9 to 5.
-
-		Moon – The reflection of my thoughts, emotions, and inner beauty.
-
-		Earth – The grounding force of principles and ethics that shape both my work and who I am.
-
-		Take a detour through my little universe.
-
-          </p>
+          <div className="text-center space-y-4">
+  	<h2 className="text-2xl md:text-3xl font-light text-white tracking-wide italic">
+ 	   Hello, and thanks for stopping by.
+ 	 </h2>
+ 	 <p className="text-base md:text-lg text-gray-300 max-w-md">
+ 	   This is a glimpse into who I am—not to flaunt, but to record. Much of it may sound universal or even redundant. But I believe a 	complex human brain deserves to occupy a few hundred megabytes of internet space.<br /><br />
+   	 To the recruiters—if you're here, I assume you're looking for more than just a resume. Not a mere work engine, but a personality to add 	to your team.<br /><br />
+    	My world unfolds in three parts:<br /><br />
+      	 <strong>Sun</strong> – My professional arena, where I shine from 9 to 5.<br />
+   	 <strong>Moon</strong> – The reflection of my thoughts, emotions, and inner beauty.<br />
+   	 <strong>Earth</strong> – The grounding force of principles and ethics that shape both my work and who I am.<br /><br />
+  	  Take a detour through my little universe.
+  	</p>
+	</div>
         </div>
           {/* Icons with Labels */}
          <div className="flex gap-10 text-white text-center">

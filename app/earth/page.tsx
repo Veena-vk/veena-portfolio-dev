@@ -5,7 +5,7 @@ import EarthImageDebris from "./components/EarthImageDebris";
 
 export default function Earth() {
   return (
-    <div className="relative min-h-screen text-white overflow-x-hidden">
+    <div className="relative min-h-screen text-white overflow-x-hidden hover:animate-shake">
       <EarthBackground />
       <EarthFloatingLayer />
       <EarthImageDebris />
