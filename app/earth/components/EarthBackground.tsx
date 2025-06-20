@@ -1,4 +1,5 @@
 // components/EarthBackground.tsx
+
 import { useEffect, useRef } from "react";
 
 export default function EarthBackground() {

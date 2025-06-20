@@ -1,5 +1,5 @@
 // app/earth/page.tsx or pages/earth.tsx
-import EarthBackground from "@/components/EarthBackground";
+import EarthBackground from "./components/EarthBackground";
 
 export default function Earth() {
   return (
