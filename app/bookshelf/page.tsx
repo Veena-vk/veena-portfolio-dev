@@ -45,7 +45,7 @@ export default function BookshelfPage() {
         <Image
           src="/bookshelf-bg.png"
           alt="Bookshelf background"
-          layout="fill"
+          fill
           objectFit="cover"
           className="opacity-10"
         />
