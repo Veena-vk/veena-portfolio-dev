@@ -15,7 +15,7 @@ export default function BookshelfPage() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bookshelf-bg.jpg"
+          src="/bookshelf-bg.png"
           alt="Bookshelf background"
           layout="fill"
           objectFit="cover"

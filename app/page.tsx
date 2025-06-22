@@ -48,7 +48,7 @@ export default function Home() {
 	  </div>
           <div className="flex flex-col items-center">
  	   <Link href="/bookshelf" className="text-3xl hover:scale-110 transition-transform">📚</Link>
- 	   <span className="text-sm mt-1 text-gray-400">Book Shelf</span>
+ 	   <span className="text-sm mt-1 text-gray-400">Bookshelf</span>
 	  </div>
 	</div>
 
