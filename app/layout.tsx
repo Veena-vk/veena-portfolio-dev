@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-black text-white relative font-sans">
         {/* Top Bar with Hamburger */}
         <div className="w-full flex justify-between items-center px-6 py-4 absolute top-0 left-0 z-50">
-          <div className="text-lg font-semibold text-gray-300">Veena's Profile</div>
+          <div className="text-lg font-semibold text-gray-300">Veena's Universe</div>
           <button
             className="text-3xl focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}

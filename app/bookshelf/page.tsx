@@ -91,7 +91,7 @@ export default function BookshelfPage() {
                 {book.status && (
                   <span
                     className={`text-xs font-medium px-2 py-0.5 rounded-full ${
-                      STATUS_COLOR[book.status]
+                      STATUS_COLOR[book.status as keyof typeof STATUS_COLOR]
                     }`}
                   >
                     {book.status === 'read' ? '✅ Read' : '📖 To Read'}
