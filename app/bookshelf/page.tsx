@@ -25,12 +25,25 @@ export default function BookshelfPage() {
     return statusMatch && tagMatch;
   });
 
+  const statusCounts = {
+    all: books.length,
+    read: books.filter((b) => b.status === 'read').length,
+    tbr: books.filter((b) => b.status === 'tbr').length,
+  };
+
+  const tagCounts = {
+    all: books.length,
+    sun: books.filter((b) => b.tags.includes('sun')).length,
+    moon: books.filter((b) => b.tags.includes('moon')).length,
+    earth: books.filter((b) => b.tags.includes('earth')).length,
+  };
+
   return (
     <main className="relative min-h-screen text-gray-900">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bookshelf-bg.jpg"
+          src="/bookshelf-bg.png"
           alt="Bookshelf background"
           layout="fill"
           objectFit="cover"
@@ -49,25 +62,26 @@ export default function BookshelfPage() {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
-          {['all', 'read', 'tbr'].map((f) => (
+          {(['all', 'read', 'tbr'] as const).map((f) => (
             <button
               key={f}
               className={`px-4 py-1 rounded-full text-sm font-medium shadow-sm transition ${
                 statusFilter === f ? 'bg-black text-white' : 'bg-gray-100 text-gray-600'
               }`}
-              onClick={() => setStatusFilter(f as 'all' | 'read' | 'tbr')}
+              onClick={() => setStatusFilter(f)}
             >
               {f === 'all' ? '📚 All' : f === 'read' ? '✅ Read' : '📖 To Read'}
+              <span className="ml-1 text-xs">({statusCounts[f]})</span>
             </button>
           ))}
 
-          {['all', 'sun', 'moon', 'earth'].map((t) => (
+          {(['all', 'sun', 'moon', 'earth'] as const).map((t) => (
             <button
               key={t}
               className={`px-4 py-1 rounded-full text-sm font-medium shadow-sm transition ${
                 tagFilter === t ? 'bg-black text-white' : 'bg-gray-100 text-gray-600'
               }`}
-              onClick={() => setTagFilter(t as 'all' | 'sun' | 'moon' | 'earth')}
+              onClick={() => setTagFilter(t)}
             >
               {t === 'all'
                 ? '🌈 All'
@@ -76,6 +90,7 @@ export default function BookshelfPage() {
                 : t === 'moon'
                 ? '🌙 Moon'
                 : '🌍 Earth'}
+              <span className="ml-1 text-xs">({tagCounts[t]})</span>
             </button>
           ))}
         </div>
