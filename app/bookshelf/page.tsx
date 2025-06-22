@@ -47,7 +47,6 @@ export default function BookshelfPage() {
           alt="Bookshelf background"
           fill
           objectFit="cover"
-          className="opacity-10"
         />
       </div>
 
