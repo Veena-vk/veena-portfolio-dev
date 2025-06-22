@@ -1,10 +1,11 @@
 'use client';
 
-
 import Intro from './components/Intro';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import { AcademicProjects } from './projects/AcademicProjects';
+import { CapstonePath } from './projects/CapstonePath';
 
 export default function SunPage() {
   return (
@@ -13,6 +14,16 @@ export default function SunPage() {
       <Education />
       <Experience />
       <Skills />
+
+      <section>
+        <h2 className="text-3xl font-bold mb-6">Academic Projects</h2>
+        <AcademicProjects />
+      </section>
+
+      <section>
+        <h2 className="text-3xl font-bold mb-6">Capstone Project: RISC-V SoC Journey</h2>
+        <CapstonePath />
+      </section>
 
       <footer className="text-right italic text-sm text-yellow-800">
         "Precision is poetic when it moves electrons."
