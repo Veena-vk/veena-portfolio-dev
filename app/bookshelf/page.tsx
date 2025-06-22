@@ -49,6 +49,17 @@ export default function BookshelfPage() {
                     {tag === 'sun' ? '☀️' : tag === 'moon' ? '🌙' : '🌍'}
                   </span>
                 ))}
+                {book.status && (
+  		<span
+  		  className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+  		    book.status === 'read'
+ 		       ? 'bg-green-100 text-green-800'
+		        : 'bg-gray-100 text-gray-600'
+		    }`}
+		  >
+  		  {book.status === 'read' ? '✅ Read' : '📖 To Read'}
+ 		 </span>
+		)}
               </div>
             </div>
           ))}
