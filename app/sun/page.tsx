@@ -20,7 +20,7 @@ export default function SunPage() {
         <AcademicProjects />
       </section>
 
-      <section>
+      <section className="p-6 rounded-2xl border border-yellow-300 bg-yellow-100/30 shadow-md shadow-yellow-200">
         <h2 className="text-2xl font-semibold text-yellow-700 mb-4">Capstone Project: RISC-V SoC Journey</h2>
         <CapstonePath />
       </section>
