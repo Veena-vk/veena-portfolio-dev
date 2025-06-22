@@ -46,13 +46,17 @@ export default function Home() {
  	   <Link href="/earth" className="text-3xl hover:scale-110 transition-transform">🌍</Link>
  	   <span className="text-sm mt-1 text-gray-400">Retrospections</span>
 	  </div>
+          <div className="flex flex-col items-center">
+ 	   <Link href="/bookshelf" className="text-3xl hover:scale-110 transition-transform">📚</Link>
+ 	   <span className="text-sm mt-1 text-gray-400">Book Shelf</span>
+	  </div>
 	</div>
 
         {/* Right Side with Full-Stretch Profile Image */}
         <div className="hidden md:block md:w-1/2 w-full h-64 md:h-full relative">
           <Image
             src="/profile.png"
-            alt="Veena's profile"
+            alt="Veena's Universe"
             fill
             className="object-cover"
             priority

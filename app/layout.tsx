@@ -42,6 +42,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/earth" onClick={() => setMenuOpen(false)} className="text-xl hover:text-yellow-400">
               🌍 Crossroads
             </Link>
+            <Link href="/bookshelf" onClick={() => setMenuOpen(false)} className="text-xl hover:text-yellow-400">
+              📚 Book Shelf
+            </Link>
           </div>
         </div>
 
