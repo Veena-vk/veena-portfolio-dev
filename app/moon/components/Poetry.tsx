@@ -7,7 +7,7 @@ export default function Poetry() {
 
   return (
     <div>
-      <h2 className="text-2xl font-semibold text-yellow-400 mb-4">🖋️ Poetry</h2>
+      <h2 className="text-2xl font-semibold text-yellow-400 mb-4">Featured Poetry</h2>
       <div className="flex space-x-4 mb-4">
         <button
           onClick={() => setActiveTab('tamil')}
@@ -29,17 +29,35 @@ export default function Poetry() {
       <div className="text-gray-300 font-serif border-l-4 border-yellow-500 pl-4">
         {activeTab === 'tamil' ? (
           <p className="whitespace-pre-line">
-            நிலவு விழிக்கும் நேரம்{'\n'}
-            எண்ணங்கள் உருக்கொள்கின்றன{'\n'}
-            நான் அங்கும் இங்கும்{'\n'}
-            ஆனாலும் எப்போதும் இங்கேயே
+            லௌகீக சஞ்சரிப்பில் தன்னை {'\n'}
+	    எங்கோ தொலைத்து விட்ட மனம் {'\n'}
+	    பௌர்ணமி நிலவில் புதுமலரென {'\n'}
+	    இறுக்கம் தளர்ந்து இதழ் விரிக்கிறது {'\n'}
+	    தூரதேசங்கள் காண வாழ்நாள் {'\n'}
+	    சொற்பமென்று எண்ணிய இளமை {'\n'}
+	    முடிவுறாது நீளும் கணமொன்று {'\n'}
+	    உயிர் செழிக்க போதுமென்கிறது {'\n'}
+	    தொலையாப் பகலே... முடியா இரவே {'\n'}
+	    அலர்ந்து ஆசையென்ற அலையடங்கி {'\n'}
+	    இந்த கணநேர ஞானம் கலையாதிருக்க {'\n'}
+	    காலமே.... சற்று நேரம் ஓய்வெடுப்பாயாக 
           </p>
         ) : (
           <p className="whitespace-pre-line">
-            When the moon awakens,{'\n'}
-            thoughts dissolve in silence.{'\n'}
-            I am here and there —{'\n'}
-            and yet, always… right here.
+            In the whirl of the worldly path, {'\n'}
+	    The mind has lost itself—somewhere far. {'\n'}
+	    But beneath the full moon, like a newborn bloom, {'\n'}
+	    The grip loosens; the petals gently open. {'\n'}
+	    {'\n'}
+	    Youth once thought a lifetime {'\n'}
+	    Too short to see distant lands— {'\n'}
+	    But now, a single undying moment {'\n'}
+	    Feels enough to make the soul flourish. {'\n'}
+            {'\n'}
+	    O endless day... O unfinished night... {'\n'}
+	    The blooming wave called desire recedes. {'\n'}
+	    Let this moment of knowing remain undisturbed— {'\n'}
+	    O Time, pause a while. Rest, just for now.
           </p>
         )}
       </div>
