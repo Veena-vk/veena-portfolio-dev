@@ -44,9 +44,9 @@ export default function BookshelfPage() {
                 {book.tags.map((tag) => (
                   <span
                     key={tag}
-                    className={`text-xs font-medium px-2 py-0.5 rounded-full ${TAG_COLOR[tag]}`}
+                    className={`text-xs font-medium px-2 py-0.5 rounded-full ${TAG_COLOR[tag as keyof typeof TAG_COLOR]}`}
                   >
-                    {tag === 'sun' ? '☀️ Sun' : tag === 'moon' ? '🌙 Moon' : '🌍 Earth'}
+                    {tag === 'sun' ? '☀️' : tag === 'moon' ? '🌙' : '🌍'}
                   </span>
                 ))}
               </div>
