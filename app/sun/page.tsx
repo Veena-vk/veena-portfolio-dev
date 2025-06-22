@@ -16,12 +16,12 @@ export default function SunPage() {
       <Skills />
 
       <section>
-        <h2 className="text-3xl font-bold mb-6">Academic Projects</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Academic Projects</h2>
         <AcademicProjects />
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold mb-6">Capstone Project: RISC-V SoC Journey</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Capstone Project: RISC-V SoC Journey</h2>
         <CapstonePath />
       </section>
 
