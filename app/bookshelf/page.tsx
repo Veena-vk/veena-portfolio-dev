@@ -16,10 +16,14 @@ const STATUS_COLOR = {
 };
 
 export default function BookshelfPage() {
-  const [filter, setFilter] = useState<'all' | 'read' | 'tbr'>('all');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'read' | 'tbr'>('all');
+  const [tagFilter, setTagFilter] = useState<'all' | 'sun' | 'moon' | 'earth'>('all');
 
-  const filteredBooks =
-    filter === 'all' ? books : books.filter((b) => b.status === filter);
+  const filteredBooks = books.filter((book) => {
+    const statusMatch = statusFilter === 'all' || book.status === statusFilter;
+    const tagMatch = tagFilter === 'all' || book.tags.includes(tagFilter);
+    return statusMatch && tagMatch;
+  });
 
   return (
     <main className="relative min-h-screen text-gray-900">
@@ -39,27 +43,39 @@ export default function BookshelfPage() {
         <section className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl font-extrabold mb-4">Veena’s Bookshelf</h1>
           <p className="text-sm text-gray-700 italic">
-            This shelf holds the fragments that shaped my thinking — from the
-            precise rhythms of silicon to the chaos of the cosmos, from circuit
-            boards to existential doubt. Categorized not by subject, but by
-            light: ☀️ Sun for the professional, 🌙 Moon for the poetic, 🌍 Earth
-            for the strange intersections.
+            This shelf holds the fragments that shaped my thinking — from the precise rhythms of silicon to the chaos of the cosmos, from circuit boards to existential doubt. Categorized not by subject, but by light: ☀️ Sun for the professional, 🌙 Moon for the poetic, 🌍 Earth for the strange intersections.
           </p>
         </section>
 
         {/* Filter Buttons */}
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {['all', 'read', 'tbr'].map((f) => (
             <button
               key={f}
               className={`px-4 py-1 rounded-full text-sm font-medium shadow-sm transition ${
-                filter === f
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-gray-600'
+                statusFilter === f ? 'bg-black text-white' : 'bg-gray-100 text-gray-600'
               }`}
-              onClick={() => setFilter(f as 'all' | 'read' | 'tbr')}
+              onClick={() => setStatusFilter(f as 'all' | 'read' | 'tbr')}
             >
               {f === 'all' ? '📚 All' : f === 'read' ? '✅ Read' : '📖 To Read'}
+            </button>
+          ))}
+
+          {['all', 'sun', 'moon', 'earth'].map((t) => (
+            <button
+              key={t}
+              className={`px-4 py-1 rounded-full text-sm font-medium shadow-sm transition ${
+                tagFilter === t ? 'bg-black text-white' : 'bg-gray-100 text-gray-600'
+              }`}
+              onClick={() => setTagFilter(t as 'all' | 'sun' | 'moon' | 'earth')}
+            >
+              {t === 'all'
+                ? '🌈 All'
+                : t === 'sun'
+                ? '☀️ Sun'
+                : t === 'moon'
+                ? '🌙 Moon'
+                : '🌍 Earth'}
             </button>
           ))}
         </div>
