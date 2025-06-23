@@ -59,7 +59,7 @@ module lfsr_galois_16 (
       },
       {
         label: "Improved",
-        summary: "Parameterizable LFSR supporting any width and tap mask. Adds entropy estimation module.",
+        summary: "Parameterizable LFSR supporting any type(Galois, Fibonacci), width and tap mask. Planning to provision for input data for CRC and Scrambling add-ons",
         status: "In Progress",
         snippet: `// Parameterized LFSR with entropy analyzer
 module lfsr_parametrized #(
@@ -145,30 +145,43 @@ module lfsr_parametrized #(
         status: "Complete",
         snippet: `
 module pomodoro_timer (
-  input clk, rst, start,
-  output reg [7:0] minutes,
-  output reg active
+input wire clk,
+input wire rst_n,
+input wire start,
+output wire [7:0] minutes,
+output wire [7:0] seconds,
+output wire time_over
 );
-  reg [25:0] counter;
 
-  always @(posedge clk or posedge rst) begin
-    if (rst) begin
-      minutes <= 25;
-      counter <= 0;
-      active <= 0;
-    end else if (start) begin
-      active <= 1;
-      if (counter == 60_000_000) begin
-        counter <= 0;
-        if (minutes > 0)
-          minutes <= minutes - 1;
-        else
-          active <= 0;
-      end else begin
-        counter <= counter + 1;
-      end
-    end
+reg [7: 0] min_reg,sec_reg = 0;
+integer count = 0;
+reg timeout = 0;
+
+always @(posedge clk or negedge rst_n) begin
+   if (!rst_n) begin
+       min_reg <= 0;
+       sec_reg <= 0;
+       count <= 0;
+       timeout <= 0;
+   end
+   else if (start) begin
+       count <= count+1;
+       if (count == 10000000)    //Assuming 100MHz Clock
+          count <= 0;
+          sec_reg <= sec_reg +1;
+       end
+       if (sec_reg == 59) begin
+           sec_reg <= 0;
+           min_reg <= min_reg + 1;
+       end
+       if (min_reg == 25) begin
+          min_reg <= 0;
+          timeout <= 1;
+       end
   end
+assign minutes = min_reg;
+assign seconds = sec_reg;
+assign time_over = timeout;
 endmodule
         `.trim(),
       },
