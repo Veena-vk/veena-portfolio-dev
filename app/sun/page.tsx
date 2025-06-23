@@ -4,7 +4,7 @@ import Intro from './components/Intro';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
-import RtlGarden from "./RtlGarden";
+import RtlGarden from "./components/RtlGarden";
 import { AcademicProjects } from './projects/AcademicProjects';
 import { CapstonePath } from './projects/CapstonePath';
 
