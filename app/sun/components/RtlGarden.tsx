@@ -2,8 +2,6 @@
 
 import { rtlGarden } from "../data/rtlGarden";
 import { useState } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/cjs/prism";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function RtlGarden() {
   return (
@@ -63,17 +61,9 @@ function PhaseCard({ phase }: { phase: any }) {
             {expanded ? "Hide Code" : "Show Code"}
           </button>
           {expanded && (
-            <SyntaxHighlighter
-    		language="verilog"
-    		style={vscDarkPlus}
-    		customStyle={{
-      		fontSize: "0.75rem",
-      		borderRadius: "0.5rem",
-      		padding: "1rem",
-    		}}
-  	    >
-           {phase.snippet}
-           </SyntaxHighlighter>
+           <pre className="mt-2 p-2 bg-black text-green-300 text-xs overflow-auto rounded">
+              <code>{phase.snippet}</code>
+            </pre>
           )}
         </div>
       )}
