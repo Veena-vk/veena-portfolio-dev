@@ -59,8 +59,8 @@ module lfsr_galois_16 (
       },
       {
         label: "Improved",
-        summary: "Parameterizable LFSR supporting any type(Galois, Fibonacci), width and tap mask. {'/n'}Provision for input data for CRC and Scrambling add-ons",
-        status: "In Progress",
+        summary: "Parameterizable LFSR supporting any type(Galois, Fibonacci), width and tap mask.",
+        status: "Completed",
         snippet: `// Parameterized LFSR with entropy analyzer
 module lfsr_parametrized #(
   parameter LFSR_WIDTH = 16,
