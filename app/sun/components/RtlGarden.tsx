@@ -2,7 +2,7 @@
 
 import { rtlGarden } from "../data/rtlGarden";
 import { useState } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/esm/prism";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function RtlGarden() {
