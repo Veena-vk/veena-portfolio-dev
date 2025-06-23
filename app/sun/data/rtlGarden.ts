@@ -9,24 +9,52 @@ export const rtlGarden = [
         summary: "16-bit Fibonacci and Galois LFSRs with fixed taps and seed. Compared for behavior and hardware usage.",
         status: "Complete",
         snippet: `// 16-bit Galois LFSR (X^16 + X^14 + X^13 + X^11 + 1)
-module galois_lfsr (
-  input clk, rst,
-  output reg [15:0] out
-);
-  always @(posedge clk or posedge rst) begin
-    if (rst)
-      out <= 16'hACE1;
-    else begin
-      out[0]  <= out[15];
-      out[1]  <= out[0];
-      out[2]  <= out[1];
-      out[3]  <= out[2] ^ out[15];
-      out[4]  <= out[3] ^ out[15];
-      out[5]  <= out[4] ^ out[15];
-      out[15:6] <= out[14:5];
+module lfsr_galois_16 (
+    input wire clk,
+    input wire rst_n,
+    input wire load,
+    input wire start,
+    input wire [15:0] seed,
+    output wire [15:0] data_out,
+    output valid
+    );
+    
+    reg [15:0] lfsr_reg;
+    reg val_reg;
+    wire feedback;
+    assign feedback = lfsr_reg[15];
+    always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        lfsr_reg <= 0;
+        val_reg <= 0;
+    end    
+    else if (load) begin
+        lfsr_reg <= (seed == 0)?16'h1 : seed;
+        val_reg <= 0;
+    end    
+    else if(start) begin
+        val_reg <= 1;
+        lfsr_reg[0]  <= feedback;
+	lfsr_reg[1]  <= lfsr_reg[0];
+	lfsr_reg[2]  <= lfsr_reg[1];
+	lfsr_reg[3]  <= lfsr_reg[2];
+	lfsr_reg[4]  <= lfsr_reg[3];
+	lfsr_reg[5]  <= lfsr_reg[4];
+	lfsr_reg[6]  <= lfsr_reg[5];
+	lfsr_reg[7]  <= lfsr_reg[6];
+	lfsr_reg[8]  <= lfsr_reg[7];
+	lfsr_reg[9]  <= lfsr_reg[8];
+	lfsr_reg[10] <= lfsr_reg[9] ^ feedback;   // x¹¹
+	lfsr_reg[11]  <= lfsr_reg[10];
+	lfsr_reg[12] <= lfsr_reg[11] ^ feedback;  // x¹³
+	lfsr_reg[13] <= lfsr_reg[12] ^ feedback;  // x¹⁴
+	lfsr_reg[14] <= lfsr_reg[13] ^ feedback;  // x¹⁵
+	lfsr_reg[15] <= lfsr_reg[14];             // shift MSB
     end
-  end
-endmodule
+   end
+   assign data_out = lfsr_reg;
+   assign valid = val_reg;
+   endmodule 
         `.trim(),
       },
       {
@@ -34,24 +62,68 @@ endmodule
         summary: "Parameterizable LFSR supporting any width and tap mask. Adds entropy estimation module.",
         status: "In Progress",
         snippet: `// Parameterized LFSR with entropy analyzer
-module param_lfsr #(
-  parameter WIDTH = 16,
-  parameter TAPS = 16'hD008,
-  parameter SEED = 16'hACE1
-)(
-  input clk, rst,
-  output reg [WIDTH-1:0] out
-);
-  integer i;
-  wire feedback = ^(out & TAPS);
+module lfsr_parametrized #(
+  parameter LFSR_WIDTH = 16,
+  parameter SEED = 16'hFFFF,
+  parameter [LFSR_WIDTH-1:0] TAPS = 16'b1101010000000000
+  )
+  (
+  input wire clk,
+  input wire rst_n,
+  input wire load,
+  input wire start,
+  input wire mode,
+  input wire [LFSR_WIDTH-1:0] seed,
+  output wire [LFSR_WIDTH-1:0] data_out,
+  output valid
+  );
+    reg [LFSR_WIDTH-1:0] lfsr_reg;
+    reg val_reg;
+    wire feedback = (mode == 0) ? lfsr_reg[LFSR_WIDTH-1] : compute_feedback(lfsr_reg, TAPS);
+    integer i;
+    function automatic logic compute_feedback(
+      input logic [LFSR_WIDTH-1:0] state,
+      input logic [LFSR_WIDTH-1:0] taps
+      );
+      logic fb;
+      integer j;
+      begin
+        fb = 1'b0;
+        for (j = 0; j < LFSR_WIDTH; j = j + 1) begin
+          if (taps[j])
+            fb = fb ^ state[j];
+          end
+        return fb;
+      end
+    endfunction
 
-  always @(posedge clk or posedge rst) begin
-    if (rst)
-      out <= SEED;
-    else
-      out <= {out[WIDTH-2:0], feedback};
-  end
-endmodule
+    always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        lfsr_reg <= 0;
+        val_reg <= 0;
+    end    
+    else if (load) begin
+        lfsr_reg <= (seed == 0) ? (LFSR_WIDTH)'h1 : seed;
+        val_reg <= 0;
+    end    
+    else if(start) begin
+        if (mode == 0) begin   //Galois
+           for (i = LFSR_WIDTH-1; i > 0; i = i - 1) begin
+     	      lfsr_reg[i] <= lfsr_reg[i-1] ^ (TAPS[i] & feedback);
+           end
+           lfsr_reg[0] <= feedback;
+           val_reg <= 1;
+        end
+        else begin
+           lfsr_reg <= {lfsr_reg[LFSR_WIDTH-2:0],feedback};
+           val_reg <= 1;
+        end
+    end
+    end
+   assign data_out = lfsr_reg;
+   assign valid = val_reg;       
+   endmodule
+           
         `.trim(),
       },
       {
