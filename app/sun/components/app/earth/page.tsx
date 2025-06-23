@@ -1,5 +1,4 @@
 // app/earth/page.tsx
-import CrackpotFiles from "./components/CrackpotFiles";
 
 export default function Earth() {
   return (
@@ -23,7 +22,7 @@ export default function Earth() {
           <p className="text-gray-300 mb-4">
             Unverified theories, speculative thoughts, and intuitive leaps.
           </p>
-          <CrackpotFiles />
+          {/* TODO: <CrackpotFiles /> */}
         </section>
 
         <section className="bg-neutral-800 p-6 rounded-xl shadow-sm border border-neutral-700">
