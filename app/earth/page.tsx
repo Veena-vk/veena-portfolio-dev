@@ -5,7 +5,7 @@ export default function Earth() {
   return (
     <div className="relative min-h-screen text-white">
       <EarthBackground />
-    <div className="min-h-screen bg-gradient-to-b from-[#1f1f1f] to-[#2c2c2c] text-white overflow-x-hidden">
+    <div className="relative z-20 p-10">
       <main className="px-4 sm:px-8 md:px-16 py-20 space-y-24 max-w-5xl mx-auto">
         {/* Header */}
         <header className="text-center space-y-4">
