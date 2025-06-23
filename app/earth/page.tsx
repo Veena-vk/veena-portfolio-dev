@@ -1,38 +1,54 @@
-// app/earth/page.tsx or pages/earth.tsx
-import EarthBackground from "./components/EarthBackground";
-import EarthFloatingLayer from "./components/EarthFloatingLayer";
-import EarthImageDebris from "./components/EarthImageDebris";
+// app/earth/page.tsx
 
 export default function Earth() {
   return (
-    <div className="relative min-h-screen text-white overflow-x-hidden hover:animate-shake">
-      <EarthBackground />
-      <EarthFloatingLayer />
-      <EarthImageDebris />
-      <div className="relative z-10 p-8 space-y-16">
-        <h1 className="text-4xl font-bold">🌍 The Earth Corner</h1>
+    <div className="min-h-screen bg-gradient-to-b from-[#1f1f1f] to-[#2c2c2c] text-white overflow-x-hidden">
+      <main className="px-4 sm:px-8 md:px-16 py-20 space-y-24 max-w-5xl mx-auto">
+        {/* Header */}
+        <header className="text-center space-y-4">
+          <h1 className="text-5xl font-extrabold tracking-tight text-white">🌍 The Earth Corner</h1>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            A grounded space for strange overlaps — between logic and dreams, failure and insight,
+            science and spirit.  
+          </p>
+          <p className="text-sm text-gray-500 italic">
+            Disclaimer: These are not final answers. Only curious detours.
+          </p>
+        </header>
 
-        <section>
-          <h2 className="text-2xl mb-4">🗂 Crackpot Files</h2>
-          <p className="text-base text-gray-300">Hover to reveal theories that may (or may not) change the world.</p>
-          {/* Later: <CrackpotFiles /> */}
+        {/* Sections */}
+        <section className="bg-neutral-800 p-6 rounded-xl shadow-sm border border-neutral-700">
+          <h2 className="text-2xl font-semibold mb-2">🗂 Crackpot Files</h2>
+          <p className="text-gray-300 mb-4">
+            Unverified theories, speculative thoughts, and intuitive leaps.
+          </p>
+          {/* TODO: <CrackpotFiles /> */}
         </section>
 
-        <section>
-          <h2 className="text-2xl mb-4">💥 Failures & Pivots</h2>
-          {/* Later: <FailuresAndPivots /> */}
+        <section className="bg-neutral-800 p-6 rounded-xl shadow-sm border border-neutral-700">
+          <h2 className="text-2xl font-semibold mb-2">💥 Failures & Pivots</h2>
+          <p className="text-gray-300 mb-4">
+            Dead-ends, flawed builds, and things that fell apart — until they didn’t.
+          </p>
+          {/* TODO: <FailuresAndPivots /> */}
         </section>
 
-        <section>
-          <h2 className="text-2xl mb-4">🔁 Cross-Pollinations</h2>
-          {/* Later: <CrossPollinations /> */}
+        <section className="bg-neutral-800 p-6 rounded-xl shadow-sm border border-neutral-700">
+          <h2 className="text-2xl font-semibold mb-2">🔁 Cross-Pollinations</h2>
+          <p className="text-gray-300 mb-4">
+            Where disciplines blur — coding meets poetry, logic meets myth, science meets art.
+          </p>
+          {/* TODO: <CrossPollinations /> */}
         </section>
 
-        <section>
-          <h2 className="text-2xl mb-4">🕳 Rabbit Holes</h2>
-          {/* Later: <RabbitHoles /> */}
+        <section className="bg-neutral-800 p-6 rounded-xl shadow-sm border border-neutral-700">
+          <h2 className="text-2xl font-semibold mb-2">🕳 Rabbit Holes</h2>
+          <p className="text-gray-300 mb-4">
+            Explorations that started with a simple question and never came back the same.
+          </p>
+          {/* TODO: <RabbitHoles /> */}
         </section>
-      </div>
+      </main>
     </div>
   );
 }
