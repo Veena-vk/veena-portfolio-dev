@@ -6,6 +6,6 @@ declare module "react-syntax-highlighter/dist/esm/prism" {
   import * as React from "react";
   export const Prism: any;
 }
-declare module "react-syntax-highlighter/dist/esm/styles/prism" {
+declare module "react-syntax-highlighter/dist/cjs/styles/prism" {
   export const vscDarkPlus: any;
 }
