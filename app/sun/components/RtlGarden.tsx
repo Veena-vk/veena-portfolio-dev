@@ -1,6 +1,6 @@
 "use client";
 
-import { rtlGarden } from "./data/rtlGarden";
+import { rtlGarden } from "../data/rtlGarden";
 import { useState } from "react";
 
 export default function RtlGarden() {
