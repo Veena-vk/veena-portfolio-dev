@@ -14,7 +14,20 @@ export default function RtlGarden() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {rtlGarden.map((project) => (
           <div key={project.id} className="border rounded-2xl p-4 shadow-sm bg-white dark:bg-zinc-900">
-            <h3 className="text-xl font-bold mb-1">{project.title}</h3>
+            <div className="flex justify-between items-center mb-1">
+  		<h3 className="text-xl font-bold">{project.title}</h3>
+  		<span
+    		className={`text-xs font-semibold px-2 py-1 rounded-full ${
+      		project.difficulty === "Easy"
+        		? "bg-green-100 text-green-700"
+        		: project.difficulty === "Medium"
+        		? "bg-yellow-100 text-yellow-800"
+        		: "bg-red-100 text-red-700"
+    		}`}
+  		>
+    		{project.difficulty}
+  		</span>
+	</div>
             <p className="text-sm text-muted-foreground mb-3">{project.description}</p>
 
             <div className="space-y-3">
