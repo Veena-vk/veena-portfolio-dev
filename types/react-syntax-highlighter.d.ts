@@ -2,7 +2,7 @@ declare module "react-syntax-highlighter" {
   import * as React from "react";
   export * from "react-syntax-highlighter/dist/cjs";
 }
-declare module "react-syntax-highlighter/dist/esm/prism" {
+declare module "react-syntax-highlighter/dist/cjs/prism" {
   import * as React from "react";
   export const Prism: any;
 }
