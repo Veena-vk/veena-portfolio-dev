@@ -1,6 +1,6 @@
 // app/earth/page.tsx
 import CrackpotFiles from "./components/CrackpotFiles";
-
+import EarthBackground from './components/EarthBackground';
 export default function Earth() {
   return (
     <div className="relative min-h-screen text-white">
