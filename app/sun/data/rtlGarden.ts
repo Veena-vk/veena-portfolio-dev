@@ -313,8 +313,8 @@ endmodule
         label: "Improved",
         summary: "Adds multiple patterns, resolution selection.",
         status: "Complete",
-	snippet:
-module pattern_generator (
+	snippet:`
+module pattern_generator #(
     parameter [1:0] RESOLUTION = 0
 )(
     input wire [9:0] hcount,
