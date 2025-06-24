@@ -273,8 +273,88 @@ endmodule
       },
       {
         label: "Improved",
-        summary: "Adds multiple patterns: color bars, gradients, resolution selection.",
-        status: "Planned",
+        summary: "Adds multiple patterns, resolution selection.",
+        status: "Complete",
+	snippet:
+module pattern_generator #(
+    parameter [1:0] RESOLUTION = 0
+)(
+    input wire [9:0] hcount,
+    input wire [9:0] vcount,
+    input wire [1:0] select,  // Pattern Select
+    input wire active_video,
+    output wire [23:0] rgb
+);
+
+    // -------------------------------
+    // Resolution Parameters
+    // -------------------------------
+    localparam integer H_ACTIVE = 
+        (RESOLUTION == 2) ? 1024 :
+        (RESOLUTION == 1) ? 800  :
+                            640;
+
+    localparam integer V_ACTIVE = 
+        (RESOLUTION == 2) ? 768 :
+        (RESOLUTION == 1) ? 600 :
+                            480;
+
+    // -------------------------------
+    // Pattern Select Codes
+    // -------------------------------
+    localparam CHECKERBOARD = 2'b00;
+    localparam COLOR_BARS   = 2'b01;
+    localparam GRADIENT     = 2'b10;
+    localparam SOLID_COLOR  = 2'b11;
+
+    // -------------------------------
+    // Pattern Logic
+    // -------------------------------
+    reg [23:0] rgb_reg;
+
+    always @(*) begin
+        if (active_video) begin
+            case (select)
+                CHECKERBOARD: begin
+                    if (hcount[5] ^ vcount[5])
+                        rgb_reg = 24'hFFFFFF;  // White
+                    else
+                        rgb_reg = 24'h000000;  // Black
+                end
+
+                COLOR_BARS: begin
+                    if (vcount < V_ACTIVE / 6)
+                        rgb_reg = 24'hFF0000;  // Red
+                    else if (vcount < 2 * V_ACTIVE / 6)
+                        rgb_reg = 24'h00FF00;  // Green
+                    else if (vcount < 3 * V_ACTIVE / 6)
+                        rgb_reg = 24'h0000FF;  // Blue
+                    else if (vcount < 4 * V_ACTIVE / 6)
+                        rgb_reg = 24'hFFFF00;  // Yellow
+                    else if (vcount < 5 * V_ACTIVE / 6)
+                        rgb_reg = 24'hFF00FF;  // Magenta
+                    else
+                        rgb_reg = 24'h00FFFF;  // Cyan
+                end
+
+                GRADIENT: begin
+                    rgb_reg = {hcount[7:0], 8'd0, 8'd255 - hcount[7:0]};
+                end
+
+                SOLID_COLOR: begin
+                    rgb_reg = 24'h0000FF;  // Solid Green
+                end
+
+                default: rgb_reg = 24'h000000;
+            endcase
+        end else begin
+            rgb_reg = 24'h000000; // Outside active video
+        end
+    end
+
+    assign rgb = rgb_reg;
+
+endmodule
       },
       {
         label: "Add-ons",
