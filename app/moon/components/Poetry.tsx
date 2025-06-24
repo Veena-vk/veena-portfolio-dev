@@ -5,7 +5,7 @@ import { useState } from 'react';
 const poems = [
   {
     id: 'venpatchi',
-    title: 'யாவையும் அல்லையும் – வெண்பட்சி',
+    title: 'யாவையும் அல்லையும்',
     snippet: 'நான் :  வெண்பட்சியே! என் சொப்பனங்களின் உருவே!...',
     tamil: `நான் :  வெண்பட்சியே ! என் சொப்பனங்களின் உருவே! 
 		    தும்பைப்பூ வண்ணச் சிறகுகள் வீசி, நீல வானில் மிதக்கும் காகித ஓடமே! 
@@ -118,6 +118,51 @@ made of atoms.
 They hold everything,
 and still, they are not you.`
   },
+{
+    id: 'brimmingInDark',
+    title: 'Brimming in the Dark',
+    snippet: 'நிழலாக நீ என் மேனியெங்கும் படர... மையிருட்டில் மனமும் நிறையட்டும்',
+    tamil: `நித்திரை விழித்திரை விட்டகலும் - இது
+நிமிடங்கள் நினைவாகும் இரசவாதம்
+நிழலாக நீ என் மேனியெங்கும் படர
+நிலவொளியில் நனைந்தவாறே நான்
+
+அருகே நீ, அமைதியாய்.. அணைக்காது...
+ஆவி தவிக்கிறது, என்னில் நிலைகொள்ளாது
+இன்பத்தால் இம்சிப்பது இயல்பென்றானதோ
+ஈடேறத் துடிக்கும் ஆசைகள் பார் 
+வரிசையில்
+
+மழைக்காற்றின் முத்தத்தில் சிலிர்த்து
+மண்ணின் மடிவிழும் மலரென நான்
+உன் தொடாமல் அணைக்கும் பார்வையில்
+தொலைந்து, கரைந்து போகிறேன் வழியில்
+
+காதலின் கனம் மனதில் கூடிக்கொண்டே போகிறது
+எடைக்குறைப்பு செய் என் இடைபற்றி இழுத்து
+பிரிந்துக் கிடக்கும் கதவுகள் சேரட்டும்
+மையிருட்டில் மனமும் நிறையட்டும்`,
+    english: `When sleep lifts its curtain
+And minutes melt into golden memory,
+You spread like a shadow over my skin
+While I remain soaked in moonlight.
+
+You're near me, quiet… but never embracing.
+My breath trembles, unable to settle.
+Is it nature’s law that pleasure should torment?
+Look — my desires line up,
+Desperate to be fulfilled.
+
+Shivering at the kiss of monsoon wind,
+Like a flower surrendering to the fall of earth,
+I dissolve in your gaze—
+That touches without touch.
+
+The weight of love gathers inside me.
+You pull at my waist, easing that pressure.
+Let the doors that once stood apart come together.
+And in perfect darkness, may my soul be filled.`
+  },
   {
     id: 'timePause',
     title: 'கணநேர ஞானம்',
@@ -161,7 +206,7 @@ export default function MoonPetals() {
 
   return (
     <div>
-      <h2 className="text-2xl font-light italic text-yellow-300 mb-6">மறைந்த கவிதைகள் · Hidden Verses</h2>
+      <h2 className="text-2xl font-light italic text-yellow-300 mb-6">இரவின் மென் மொழிகள்  · Moonlit Whispers</h2>
 
       {poems.map((poem) => (
         <div
