@@ -116,14 +116,14 @@ a body, empty.
 Even that body is an image—
 made of atoms.
 They hold everything,
-and still, they are not you.
+and still, they are not you.`
   },
   {
     id: 'timePause',
     title: 'கணநேர ஞானம்',
     snippet: 'லௌகீக சஞ்சரிப்பில் தன்னை... காலமே, ஓய்வெடுப்பாயாக',
     tamil: `லௌகீக சஞ்சரிப்பில் தன்னை 
-எங்கோ தொலைத்து விட்ட மனம்
+	   எங்கோ தொலைத்து விட்ட மனம்
 பௌர்ணமி நிலவில் புதுமலரென
 இறுக்கம் தளர்ந்து இதழ் விரிக்கிறது
 தூரதேசங்கள் காண வாழ்நாள்
