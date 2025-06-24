@@ -262,12 +262,50 @@ endmodule
         summary: "640×480 checkerboard using VGA timing generator.",
         status: "Complete",
         snippet: `
-module checkerboard_gen (
-  input clk, rst,
-  output [7:0] red, green, blue,
-  output hsync, vsync
+module top (
+    input wire clk_25MHz,       // 25.2 MHz VGA pixel clock
+    input wire rst_n,           // Active-low reset
+    output wire hsync,          // VGA HSync
+    output wire vsync,          // VGA VSync
+    output wire [7:0] red,      // VGA Red channel
+    output wire [7:0] green,    // VGA Green channel
+    output wire [7:0] blue      // VGA Blue channel
 );
-  // Timing gen + checker pattern omitted for brevity
+
+    // Internal signals
+    wire [9:0] hcount, vcount;
+    wire [23:0] rgb;
+    wire active_video;
+
+    // Timing generator instance
+    // Timing code omitted for brevity
+    vga_timing timing_inst (
+        .vga_clk(clk_25MHz),
+        .rst_n(rst_n),
+        .hsync(hsync),
+        .vsync(vsync),
+        .hcount(hcount),
+        .vcount(vcount)
+    );
+
+    // Active video region (visible area: 640x480)
+    assign active_video = (hcount < 640) && (vcount < 480);
+
+    // Checkerboard pattern generator
+    // Checker pattern code omitted for brevity
+    // Simple Logic (hcount[5] ^ vcount[5]) changes every 32 pixels
+    checkerboard pattern_inst (
+        .hcount(hcount),
+        .vcount(vcount),
+        .active_video(active_video),
+        .rgb(rgb)
+    );
+
+    // Output RGB channels
+    assign red   = rgb[23:16];
+    assign green = rgb[15:8];
+    assign blue  = rgb[7:0];
+
 endmodule
         `.trim(),
       },
@@ -355,6 +393,7 @@ module pattern_generator #(
     assign rgb = rgb_reg;
 
 endmodule
+    `.trim(),
       },
       {
         label: "Add-ons",
