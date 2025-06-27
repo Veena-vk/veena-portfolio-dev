@@ -1,8 +1,8 @@
 // app/earth/page.tsx
 import React from "react";
-import ThoughtTrailsSection from "@/components/ThoughtTrailsSection";
-import OuchSection from "@/components/OuchSection";
-import CrackpotSection from "@/components/CrackpotSection";
+import ThoughtTrailsSection from "./components/ThoughtTrailsSection";
+import OuchSection from "./components/SetbackSection";
+import CrackpotSection from "./components/CrackpotSection";
 
 export default function EarthPage() {
   return (
