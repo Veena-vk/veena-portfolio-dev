@@ -1,9 +1,14 @@
 .sand-texture {
-  background-image: url('/textures/sand-grain.svg'); /* You can use a subtle SVG or PNG */
+  position: absolute;
+  inset: 0;
+  background-image: url('/textures/sand-grain.svg');
   background-repeat: repeat;
   background-size: 400px 400px;
-  opacity: 20;
   animation: shiftSand 40s linear infinite;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes shiftSand {
