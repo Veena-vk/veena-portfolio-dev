@@ -1,4 +1,4 @@
-const certificates = [
+export const certificates = [
   {
     title: "FPGA Computing Systems: Background Knowledge",
     platform: "Politecnico di Milano",
