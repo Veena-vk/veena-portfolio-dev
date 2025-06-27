@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import DisclaimerModal from "./components/DisclaimerModal";
 
 export default function Home() {
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
   return (
     <main className="h-screen bg-black text-white flex flex-col">
       
