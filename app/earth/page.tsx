@@ -8,8 +8,8 @@ import WaveDivider from "./components/WaveDivider";
 
 export default function EarthPage() {
   return (
-    <div className="bg-[#D6C1A6] relative">
     <SandBackground>
+    <div className="bg-[#D6C1A6] relative">
      <WaveDivider position="top" inverted withFoam />
      <main className="min-h-screen text-[#2F2B23] px-6 py-12 space-y-16">
       <div className="text-center mb-6">
@@ -25,7 +25,7 @@ export default function EarthPage() {
       <CrackpotSection />
     </main>
     <WaveDivider position="bottom" withFoam />
-    </SandBackground>
     </div>
+    </SandBackground>
   );
 }

@@ -5,6 +5,7 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import RtlGarden from "./components/RtlGarden";
+import CertificatesCard from "./components/CertificatesCard";
 import { AcademicProjects } from './projects/AcademicProjects';
 import { CapstonePath } from './projects/CapstonePath';
 
@@ -15,6 +16,9 @@ export default function SunPage() {
       <Education />
       <Experience />
       <Skills />
+      <section>
+    	<CertificatesCard />
+      </section>
       <RtlGarden />
       <section>
         <h2 className="text-2xl font-semibold text-yellow-700 mb-4">Academic Projects</h2>
