@@ -15,5 +15,3 @@ export default function SandBackground({ children }: { children: React.ReactNode
   );
 
 }
-
-export default SandBackground;

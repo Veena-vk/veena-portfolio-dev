@@ -7,7 +7,7 @@ import SandBackground from  "./components/SandBackground";
 export default function EarthPage() {
   return (
     <SandBackground>
-    <main className="min-h-screen "bg-[#D6C1A6] text-[#2F2B23] px-6 py-12 space-y-16">
+    <main className="min-h-screen bg-[#D6C1A6] text-[#2F2B23] px-6 py-12 space-y-16">
       <div className="text-center mb-6">
   	<h1 className="text-4xl md:text-5xl font-extrabold text-[#2F2B23]">
     	The Earth Section
