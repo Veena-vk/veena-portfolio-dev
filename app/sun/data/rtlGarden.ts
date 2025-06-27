@@ -2,7 +2,7 @@ export const rtlGarden = [
   {
     id: "lfsr",
     title: "Parameterizable LFSR",
-    difficulty: "Easy",
+    rarity: "🌷 Tended Bloom",
     description: "Explores pseudo-random bit generation using 16-bit Fibonacci and Galois LFSRs, extended to a configurable and reusable LFSR with entropy estimation.",
     phases: [
       {
@@ -138,7 +138,7 @@ module lfsr_parametrized #(
    {
     id: "pomodoro",
     title: "Pomodoro Timer",
-    difficulty: "Easy",
+    rarity: "🌼 Common Wildflower",
     description: "A countdown timer for productivity, based on the Pomodoro technique.",
     phases: [
       {
@@ -254,7 +254,7 @@ endmodule
   {
     id: "pattern-gen",
     title: "Video Pattern Generator",
-    difficulty: "Medium",
+    rarity: "🪻 Architect’s Hybrid",
     description: "Generates standard test patterns for video signal pipelines.",
     phases: [
       {
@@ -407,7 +407,7 @@ endmodule
   {
     id: "sudoku",
     title: "Sudoku Solver",
-    difficulty: "Hard",
+    rarity: "🌸 Rare Orchid",
     description: "Solves Sudoku puzzles in hardware using DFS backtracking.",
     phases: [
       {
