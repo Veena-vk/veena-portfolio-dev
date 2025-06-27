@@ -1,31 +1,61 @@
-import Card from "./Card";
+"use client";
+
+import React, { useState } from "react";
 
 export default function CertificatesCard() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Card className="w-full">
-      <h3 className="text-xl font-semibold mb-4">📜 Licenses & Certifications</h3>
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm text-left text-gray-800 dark:text-gray-200">
-          <thead>
-            <tr className="border-b border-zinc-300 dark:border-zinc-700">
-              <th className="py-2 pr-4">Title</th>
-              <th className="py-2 pr-4">Platform</th>
-              <th className="py-2">Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="border-b"><td>FPGA Computing Systems</td><td>Politecnico di Milano</td><td>Jun 2025</td></tr>
-            <tr className="border-b"><td>FPGA Cloud Apps (SDAccel)</td><td>Politecnico di Milano</td><td>Jun 2025</td></tr>
-            <tr className="border-b"><td>Particle Accelerator Tech</td><td>Coursera</td><td>May 2025</td></tr>
-            <tr className="border-b"><td>Intro to DevOps</td><td>IBM</td><td>May 2025</td></tr>
-            <tr className="border-b"><td>Intro to Particle Accelerators</td><td>Coursera</td><td>May 2025</td></tr>
-            <tr className="border-b"><td>SystemVerilog Essentials</td><td>Udemy</td><td>Apr 2024</td></tr>
-            <tr className="border-b"><td>C-Based VLSI Design</td><td>NPTEL</td><td>Oct 2023</td></tr>
-            <tr className="border-b"><td>VLSI Design Flow: RTL to GDS</td><td>NPTEL</td><td>Oct 2023</td></tr>
-            <tr><td>Architectural Design of Digital ICs</td><td>NPTEL</td><td>Apr 2023</td></tr>
-          </tbody>
-        </table>
+    <div className="border border-yellow-300 bg-yellow-100/40 p-6 rounded-2xl shadow-md shadow-yellow-200">
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-2xl font-semibold text-yellow-700">
+          Licenses & Certifications
+        </h2>
+        <button
+          onClick={() => setOpen(!open)}
+          className="text-sm text-yellow-800 underline hover:text-yellow-600"
+        >
+          {open ? "Hide" : "Show"}
+        </button>
       </div>
-    </Card>
+
+      {open && (
+        <div className="overflow-x-auto">
+          <table className="min-w-full text-sm text-left text-gray-800">
+            <thead className="bg-yellow-200 text-yellow-900 font-medium">
+              <tr>
+                <th className="py-2 px-3">Title</th>
+                <th className="py-2 px-3">Platform</th>
+                <th className="py-2 px-3">Date</th>
+                <th className="py-2 px-3">Link</th>
+              </tr>
+            </thead>
+            <tbody className="bg-white text-gray-700">
+              {certificates.map((cert, idx) => (
+                <tr key={idx} className="border-t border-yellow-200">
+                  <td className="py-2 px-3">{cert.title}</td>
+                  <td className="py-2 px-3">{cert.platform}</td>
+                  <td className="py-2 px-3">{cert.date}</td>
+                  <td className="py-2 px-3">
+                    {cert.link ? (
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-3 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-700 transition"
+                      >
+                        📄 View
+                      </a>
+                    ) : (
+                      <span className="text-gray-400 italic">—</span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
   );
 }
