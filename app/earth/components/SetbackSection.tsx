@@ -41,9 +41,9 @@ function ExpandableCard({ entry }: { entry: any }) {
       </div>
 
       {expanded && (
-        <div className="mt-3 space-y-3 text-sm leading-relaxed text-gray-800 dark:text-zinc-200">
+        <div className="mt-3 space-y-3 text-sm leading-relaxed text-[#FCEFD4]">
           <p>{entry.fullStory}</p>
-          <p className="italic text-yellow-900 dark:text-yellow-300">— {entry.lesson}</p>
+          <p className="italic text-amber-800 dark:text-amber-300">— {entry.lesson}</p>
         </div>
       )}
     </div>
