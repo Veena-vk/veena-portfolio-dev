@@ -1,8 +1,8 @@
-/"use client";
+"use client";
 
 import React, { useState } from "react";
 import Section from "./Section";
-import { setbacks } from "../data/setbacks";
+import { setbacks } from "./setbacks";
 
 export default function SetbackSection() {
   return (
