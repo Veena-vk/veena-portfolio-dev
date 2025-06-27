@@ -2,7 +2,7 @@
   background-image: url('/textures/sand-grain.svg'); /* You can use a subtle SVG or PNG */
   background-repeat: repeat;
   background-size: 400px 400px;
-  opacity: 0.1;
+  opacity: 20;
   animation: shiftSand 40s linear infinite;
 }
 
