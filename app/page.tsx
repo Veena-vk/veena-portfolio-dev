@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
+import DisclaimerModal from "./components/DisclaimerModal";
 
 export default function Home() {
   return (
@@ -30,6 +32,14 @@ export default function Home() {
    	 <strong>Earth</strong> – The grounding force of principles and ethics that shape both my work and who I am.<br /><br />
   	  Take a detour through my little universe.
   	</p>
+        
+        {/* Disclaimer Button */}
+	<button
+  	onClick={() => setShowDisclaimer(true)}
+  	className="mt-4 text-sm underline text-gray-400 hover:text-white transition"
+	>
+  	🪶 Read First
+	</button>
 	</div>
         </div>
           {/* Icons with Labels */}
