@@ -23,9 +23,9 @@ export default function RtlGarden() {
                 {project.rarity && (
                   <span className={`inline-block mt-1 text-xs font-medium px-2 py-0.5 rounded-full ${
                     project.rarity.includes("Wildflower")
-                      ? "bg-green-100 text-green-700"
+                      ? "bg-amber-50 text-amber-700"
                       : project.rarity.includes("Tended Bloom")
-                      ? "bg-yellow-100 text-yellow-800"
+                      ? "bg-orange-50 text-orange-700"
                       : project.rarity.includes("Hybrid")
                       ? "bg-purple-100 text-purple-700"
                       : "bg-pink-100 text-pink-700"
