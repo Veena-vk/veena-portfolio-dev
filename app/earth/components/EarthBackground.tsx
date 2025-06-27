@@ -4,7 +4,7 @@ import RabbitHole from './RabbitHole';
 
 export default function EarthBackground() {
   return (
-    <div className="absolute inset-0 bg-[#7B5E57] overflow-hidden z-0">
+    <div className="absolute inset-0 bg-[#C1702C] overflow-hidden z-0">
       {/* Noise Texture via SVG */}
       <svg className="absolute inset-0 w-full h-full opacity-10 pointer-events-none z-0">
         <filter id="noiseFilter">
