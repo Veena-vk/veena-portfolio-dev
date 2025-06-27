@@ -74,6 +74,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <DisclaimerModal show={showDisclaimer} onClose={() => setShowDisclaimer(false)} />
     </main>
   );
 }
