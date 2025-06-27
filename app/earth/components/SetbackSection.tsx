@@ -13,7 +13,7 @@ export default function SetbackSection() {
     >
       <div className="space-y-4">
         {setbacks.map((entry) => (
-          <SetbackCard key={entry.id} entry={entry} />
+          <ExpandableCard key={entry.id} entry={entry} />
         ))}
       </div>
     </Section>
@@ -35,4 +35,3 @@ function SetbackCard({ entry }: { entry: any }) {
   );
 }
 
-export default SetbackCard;
