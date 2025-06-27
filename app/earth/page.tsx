@@ -4,7 +4,7 @@ import ThoughtTrailsSection from "./components/ThoughtTrailsSection";
 import OuchSection from "./components/SetbackSection";
 import CrackpotSection from "./components/CrackpotSection";
 import SandBackground from  "./components/SandBackground";
-import WaveDivider from "../components/WaveDivider";
+import WaveDivider from "./components/WaveDivider";
 
 export default function EarthPage() {
   return (
