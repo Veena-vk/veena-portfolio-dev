@@ -13,22 +13,30 @@ export default function RtlGarden() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {rtlGarden.map((project) => (
-          <div key={project.id} className="border rounded-2xl p-4 shadow-sm bg-white dark:bg-zinc-900">
-            <div className="flex justify-between items-center mb-1">
-  		<h3 className="text-xl font-bold">{project.title}</h3>
-  		<span
-    		className={`text-xs font-semibold px-2 py-1 rounded-full ${
-      		project.difficulty === "Easy"
-        		? "bg-green-100 text-green-700"
-        		: project.difficulty === "Medium"
-        		? "bg-yellow-100 text-yellow-800"
-        		: "bg-red-100 text-red-700"
-    		}`}
-  		>
-    		{project.difficulty}
-  		</span>
-	</div>
-            <p className="text-sm text-muted-foreground mb-3">{project.description}</p>
+          <div
+            key={project.id}
+            className="border rounded-2xl p-4 shadow-sm bg-white dark:bg-zinc-900 space-y-3"
+          >
+            <div className="flex justify-between items-start gap-4">
+              <div>
+                <h3 className="text-xl font-bold">{project.title}</h3>
+                {project.rarity && (
+                  <span className={`inline-block mt-1 text-xs font-medium px-2 py-0.5 rounded-full ${
+                    project.rarity.includes("Wildflower")
+                      ? "bg-green-100 text-green-700"
+                      : project.rarity.includes("Tended Bloom")
+                      ? "bg-yellow-100 text-yellow-800"
+                      : project.rarity.includes("Hybrid")
+                      ? "bg-purple-100 text-purple-700"
+                      : "bg-pink-100 text-pink-700"
+                  }`}>
+                    {project.rarity}
+                  </span>
+                )}
+              </div>
+              </div>
+
+            <p className="text-sm text-muted-foreground">{project.description}</p>
 
             <div className="space-y-3">
               {project.phases.map((phase, idx) => (
@@ -74,7 +82,7 @@ function PhaseCard({ phase }: { phase: any }) {
             {expanded ? "Hide Code" : "Show Code"}
           </button>
           {expanded && (
-           <pre className="mt-2 p-2 bg-black text-green-300 text-xs overflow-auto rounded">
+            <pre className="mt-2 p-2 bg-black text-green-300 text-xs overflow-auto rounded">
               <code>{phase.snippet}</code>
             </pre>
           )}
