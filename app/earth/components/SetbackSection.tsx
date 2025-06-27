@@ -3,7 +3,7 @@ import React from "react";
 import Card from "./Card";
 import Section from "./Section";
 
-const OuchSection = () => (
+const SetbackSection = () => (
   <Section icon="💥" title="Ouch – But I Grew" subtitle="Retreating Tides">
     <Card
       title="AXI Stream Deadlock: Forgot TLAST"
