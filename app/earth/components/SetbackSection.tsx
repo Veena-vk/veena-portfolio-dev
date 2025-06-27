@@ -24,7 +24,7 @@ function ExpandableCard({ entry }: { entry: any }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="border border-gray-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-4 shadow-sm">
+    <div className="border-none bg-[#59200F] text-[#FDF5E6] rounded-2xl p-4 shadow-sm">
       <div className="flex items-start justify-between">
         <div>
           <h3 className="text-lg font-semibold flex items-center gap-2">
