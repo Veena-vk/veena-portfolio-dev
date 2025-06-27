@@ -43,7 +43,7 @@ function ExpandableCard({ entry }: { entry: any }) {
       {expanded && (
         <div className="mt-3 space-y-3 text-sm leading-relaxed text-[#FCEFD4]">
           <p>{entry.fullStory}</p>
-          <p className="italic text-amber-800 dark:text-amber-300">— {entry.lesson}</p>
+          <p className="italic text-[#BFA173] dark:text-[#E9D8B4]">— {entry.lesson}</p>
         </div>
       )}
     </div>
