@@ -71,7 +71,7 @@ function ProjectCard({ project }: { project: any }) {
           <p>
             <strong>🧠 RTL Design:</strong> {project.designNotes}
           </p>
-          {project.status === "Full Bloom" && project.link ? (
+          {project.status === "Full Bloom 🪷" && project.link ? (
             <p>
               <strong>📂 RTL Gist / GitHub:</strong>{" "}
               <Link
