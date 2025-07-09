@@ -4,9 +4,6 @@ import { certificates } from "../data/certificates";
 export default function CertificatesCard() {
   return (
     <div className="border border-gray-300 bg-white p-6 rounded-xl shadow-sm">
-      <h2 className="text-2xl font-semibold text-yellow-700 mb-4">
-        Licenses & Certifications
-      </h2>
 
       <div className="overflow-x-auto">
         <table className="min-w-full text-sm text-left text-gray-800">

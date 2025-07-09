@@ -17,7 +17,7 @@ export default function SunPage() {
       <Experience />
       <Skills />
       <section className="space-y-4">
-     <h2 className="text-2xl font-semibold text-yellow-700">Licenses & Certifications</h2>
+     <h2 className="text-2xl font-semibold text-yellow-700">Courses & Certifications</h2>
     	<CertificatesCard />
       </section>
       <RtlGarden />
