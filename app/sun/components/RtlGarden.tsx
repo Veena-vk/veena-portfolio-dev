@@ -71,11 +71,11 @@ function ProjectCard({ project }: { project: any }) {
           <p>
             <strong>🧠 RTL Design:</strong> {project.designNotes}
           </p>
-          {project.status === "Full Bloom 🪷" && project.link ? (
+          {project.status === "Full Bloom 🪷" && project.rtlLink ? (
             <p>
               <strong>📂 RTL Gist / GitHub:</strong>{" "}
               <Link
-                href={project.link}
+                href={project.rtlLink}
                 target="_blank"
                 className="text-blue-600 underline"
               >
