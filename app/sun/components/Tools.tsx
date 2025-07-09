@@ -29,7 +29,7 @@ export default function Tools() {
         <div>
           <h3 className="text-xl font-bold text-yellow-800">⚙️ HDL IDE</h3>
           <p className="text-muted-foreground mt-2">
-            A lightweight HDL development environment built with Electron and Monaco. It supports
+            Sangamam (Confluence): A lightweight HDL development environment built with Electron and Monaco. It supports
             Yosys-based flows, with a project-aware layout featuring editor tabs, console views, and
             status bar. Basic UI scaffolding is complete.
           </p>
@@ -69,8 +69,8 @@ export default function Tools() {
         <div>
           <h3 className="text-xl font-bold text-yellow-800">🌊 Aazhi IP Library</h3>
           <p className="text-muted-foreground mt-2">
-            A growing sea of reusable RTL and verification modules. From counters and streamers to
-            test pattern generators, Aazhi is designed to plug into SoCs or act as standalone utilities.
+            Aazhi (Ocean): A growing sea of reusable RTL and verification modules. From counters and streamers to
+            test pattern generators, Aazhi is designed to plug into SoCs or act as standalone utilities. Planned for implementing as plug-ins to my IDE.
           </p>
           <p className="mt-1">
             <Link href="https://github.com/veenavijay/aazhi" target="_blank" className="text-blue-600 underline">

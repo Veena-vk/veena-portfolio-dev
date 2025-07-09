@@ -24,6 +24,8 @@ export default function SunPage() {
       </section>
 
       <RtlGarden />
+      
+      <Tools />
 
       <section>
         <h2 className="text-2xl font-semibold text-yellow-700 mb-4">Academic Projects</h2>
@@ -35,7 +37,7 @@ export default function SunPage() {
         <CapstonePath />
       </section>
 
-      <Tools />
+      
 
       <footer className="text-right italic text-sm text-yellow-800">
         "Precision is poetic when it moves electrons."

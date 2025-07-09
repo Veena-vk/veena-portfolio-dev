@@ -1,8 +1,9 @@
-// RtlGarden.tsx — updated page layout to match new structure
+// RtlGarden.tsx — updated to restore correct link logic and show 'Coming Soon' for non-Full Bloom
 "use client";
 
 import { rtlGarden } from "../data/rtlGarden";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function RtlGarden() {
   return (
@@ -70,17 +71,19 @@ function ProjectCard({ project }: { project: any }) {
           <p>
             <strong>🧠 RTL Design:</strong> {project.designNotes}
           </p>
-          {project.status === "Full Bloom" && project.rtlLink && (
+          {project.status === "Full Bloom" && project.link ? (
             <p>
               <strong>📂 RTL Gist / GitHub:</strong>{" "}
-              <a
-                href={project.rtlLink}
+              <Link
+                href={project.link}
                 target="_blank"
                 className="text-blue-600 underline"
               >
                 View Code
-              </a>
+              </Link>
             </p>
+          ) : (
+            <p className="italic">📂 RTL coming soon…</p>
           )}
           {project.reflection && (
             <p>
