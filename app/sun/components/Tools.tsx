@@ -5,11 +5,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 const ideImages = [
-  "/ide_images/ide-1.png",
-  "/ide_images/ide-2.png",
-  "/ide_images/ide-3.png",
-  "/ide_images/ide-4.png",
-  "/ide_images/ide-5.png"
+  "/ide_images/ide-1.jpg",
+  "/ide_images/ide-2.jpg",
+  "/ide_images/ide-3.jpg",
+  "/ide_images/ide-4.jpg",
+  "/ide_images/ide-5.jpg"
 ];
 
 export default function Tools() {
