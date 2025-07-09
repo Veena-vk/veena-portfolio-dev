@@ -1,31 +1,27 @@
+// rtlGarden.ts — structured list of projects by rarity and new fields
 export const rtlGarden = [
   // 🌼 COMMON WILDFLOWER
   {
     id: "pomodoro-timer",
     title: "Pomodoro Timer",
     rarity: "Common Wildflower 🌼",
+    status: "Full Bloom 🪷",
     description: "A cycle-based productivity timer with FSM-driven work/rest periods.",
-    phases: [
-      {
-        label: "Core FSM",
-        summary: "Implements timer state machine for work and break intervals.",
-        status: "Complete",
-      },
-    ],
+    origin: "Based on the Pomodoro Technique for time management, reimagined as a state machine.",
+    designNotes: "Uses a basic counter + FSM to alternate between work and break cycles.",
+    rtlLink: "https://gist.github.com/veenavijay/pomodoro",
+    reflection: "Taught me how to use modular FSMs with time counters in clean control logic."
   },
   {
     id: "haiku-meter",
     title: "Haiku Meter",
     rarity: "Common Wildflower 🌼",
+    status: "Full Bloom 🪷",
     description: "Counts syllable pulses across 3 lines to validate 5-7-5 haiku structure.",
-    phases: [
-      {
-        label: "Syllable Pulse FSM",
-        summary: "Advances through 3-line state machine and compares line counts.",
-        status: "Complete",
-        snippet: `assign is_haiku = fsm_done & (line1 == 5) & (line2 == 7) & (line3 == 5);`,
-      },
-    ],
+    origin: "Inspired by Japanese haiku structure and syllable metering.",
+    designNotes: "Implements a 3-line FSM to count syllables and assert a haiku-valid output.",
+    rtlLink: "https://gist.github.com/veenavijay/haiku",
+    reflection: "Explored how FSMs can be symbolic in artistic contexts too."
   },
 
   // 🌿 TENDED BLOOM
@@ -33,111 +29,86 @@ export const rtlGarden = [
     id: "conway-life",
     title: "Conway's Game of Life",
     rarity: "Tended Bloom 🌿",
+    status: "Sapling 🌿",
     description: "Models cellular automaton evolution using grid memory and neighbor logic.",
-    phases: [
-      {
-        label: "Grid Evolution Logic",
-        summary: "Applies rules on each tick to evolve grid cells.",
-        status: "In Progress",
-      },
-    ],
+    origin: "Based on Conway’s rules of life from mathematics and computer science.",
+    designNotes: "Implements synchronous updates to a 2D grid using neighbor counters.",
+    rtlLink: "https://gist.github.com/veenavijay/life",
+    reflection: "Learned to manage grid memory and simulate parallel updates."
   },
   {
     id: "eclipse-predictor",
     title: "Eclipse Predictor",
     rarity: "Tended Bloom 🌿",
-    description: "Models celestial alignments to predict solar and lunar eclipses using minute-level phase and node tracking.",
-    phases: [
-      {
-        label: "Celestial Condition FSM",
-        summary: "Detects new/full moon + node alignment to raise eclipse flags.",
-        status: "In Progress",
-        snippet: `assign is_new_moon  = (moon_phase < THRESHOLD) || (moon_phase > (CYCLE - THRESHOLD));
-assign near_node    = (node_phase < THRESHOLD) || (node_phase > (CYCLE - THRESHOLD));
-assign solar_eclipse = is_new_moon && near_node;`,
-      },
-    ],
+    status: "Sapling 🌿",
+    description: "Models celestial alignments to predict solar and lunar eclipses using minute-level phase tracking.",
+    origin: "Inspired by ancient eclipse prediction techniques and orbital math.",
+    designNotes: "FSM tracks lunar phases and nodal alignments for eclipse detection.",
+    rtlLink: "https://gist.github.com/veenavijay/eclipse",
+    reflection: "Strengthened my grasp of symbolic counters and FSMs for long-duration tracking."
   },
   {
     id: "binary-star-dance",
     title: "Binary Star Dance",
     rarity: "Tended Bloom 🌿",
+    status: "Seeded 🌱",
     description: "Visualizes the orbit of two stars around a barycenter with real-time position logic.",
-    phases: [
-      {
-        label: "Orbit Position Generator",
-        summary: "Calculates angular positions of stars in circular or elliptical orbit.",
-        status: "Planned",
-      },
-    ],
+    origin: "Inspired by binary star motion in astronomy.",
+    designNotes: "Plans to use sine/cosine lookup tables or CORDIC to animate circular paths.",
+    rtlLink: "https://gist.github.com/veenavijay/star-dance"
   },
   {
     id: "helio-centric-system",
     title: "Helio Centric System",
     rarity: "Tended Bloom 🌿",
-    description: "Models inner solar system orbiting the sun with period-accurate cycles.",
-    phases: [
-      {
-        label: "Orbital FSM",
-        summary: "Drives planet positions with simplified Keplerian timing.",
-        status: "Planned",
-      },
-    ],
+    status: "Seeded 🌱",
+    description: "Models the inner solar system orbiting the sun using period-accurate cycles.",
+    origin: "Built on early heliocentric models of Copernicus and Kepler’s laws.",
+    designNotes: "Simplified circular orbit models with adjustable orbital periods.",
+    rtlLink: "https://gist.github.com/veenavijay/helios"
   },
 
-  // 🧩 ARCHITECT'S HYBRID
+  // 🪻 ARCHITECT'S HYBRID
   {
     id: "sudoku-solver",
     title: "Sudoku Solver",
-    rarity: "Architect's Hybrid 🧩",
-    description: "A logic solver for Sudoku using grid traversal, constraint propagation, and backtracking FSM.",
-    phases: [
-      {
-        label: "Grid FSM",
-        summary: "Manages traversal and number assignment through nested states.",
-        status: "Planned",
-      },
-    ],
+    rarity: "Architect's Hybrid 🪻",
+    status: "Seeded 🌱",
+    description: "A logic solver using grid traversal, constraint propagation, and backtracking FSM.",
+    origin: "Inspired by classic Sudoku puzzles and backtracking algorithms.",
+    designNotes: "Grid walker with recursion emulation and cell constraint checkers.",
+    rtlLink: "https://gist.github.com/veenavijay/sudoku"
   },
   {
     id: "maze-runner",
     title: "Maze Runner",
-    rarity: "Architect's Hybrid 🧩",
-    description: "Simulates agent navigating a maze using directional FSM and path memory.",
-    phases: [
-      {
-        label: "Direction FSM",
-        summary: "Controls movement decisions based on wall inputs.",
-        status: "Planned",
-      },
-    ],
+    rarity: "Architect's Hybrid 🪻",
+    status: "Seeded 🌱",
+    description: "Simulates an agent navigating a maze using directional FSM and path memory.",
+    origin: "Based on virtual maze runners and AI agent simulations.",
+    designNotes: "Direction FSMs with branch memory for junctions.",
+    rtlLink: "https://gist.github.com/veenavijay/maze"
   },
 
-  // 🪷 RARE ORCHID
+  // 🌸 RARE ORCHID
   {
     id: "raga-identifier",
     title: "Raga Identifier",
-    rarity: "Rare Orchid 🪷",
+    rarity: "Rare Orchid 🌸",
+    status: "Seeded 🌱",
     description: "Detects Melakarta Carnatic ragas based on note sequences from audio stream.",
-    phases: [
-      {
-        label: "Melakarta Matcher",
-        summary: "Compares extracted swara patterns against 72 Melakarta templates.",
-        status: "Planned",
-      },
-    ],
+    origin: "From Carnatic raga classification — 72 Melakartas — and note interval logic.",
+    designNotes: "Maps input note patterns to a static LUT of Melakarta swara sequences.",
+    rtlLink: "https://gist.github.com/veenavijay/raga"
   },
   {
     id: "kolam-compiler",
     title: "Kolam Compiler",
-    rarity: "Rare Orchid 🪷",
+    rarity: "Rare Orchid 🌸",
+    status: "Seeded 🌱",
     description: "Generates chikku kolam strokes from seed points using symmetric line walkers.",
-    phases: [
-      {
-        label: "Grid Walker",
-        summary: "Traces looping symmetric strokes over 2D grid.",
-        status: "Planned",
-      },
-    ],
-  },
+    origin: "Based on Tamil Nadu’s traditional chikku kolam art.",
+    designNotes: "Uses a tracing FSM to walk symmetric paths over a grid.",
+    rtlLink: "https://gist.github.com/veenavijay/kolam"
+  }
 ];
