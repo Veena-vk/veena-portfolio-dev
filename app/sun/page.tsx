@@ -8,6 +8,7 @@ import RtlGarden from "./components/RtlGarden";
 import CertificatesCard from "./components/CertificatesCard";
 import { AcademicProjects } from './projects/AcademicProjects';
 import { CapstonePath } from './projects/CapstonePath';
+import Tools from "./components/Tools";
 
 export default function SunPage() {
   return (
@@ -16,11 +17,14 @@ export default function SunPage() {
       <Education />
       <Experience />
       <Skills />
+
       <section className="space-y-4">
-     <h2 className="text-2xl font-semibold text-yellow-700">Courses & Certifications</h2>
-    	<CertificatesCard />
+        <h2 className="text-2xl font-semibold text-yellow-700">Courses & Certifications</h2>
+        <CertificatesCard />
       </section>
+
       <RtlGarden />
+
       <section>
         <h2 className="text-2xl font-semibold text-yellow-700 mb-4">Academic Projects</h2>
         <AcademicProjects />
@@ -30,6 +34,8 @@ export default function SunPage() {
         <h2 className="text-2xl font-semibold text-yellow-700 mb-4">Capstone Project: RISC-V SoC Journey</h2>
         <CapstonePath />
       </section>
+
+      <Tools />
 
       <footer className="text-right italic text-sm text-yellow-800">
         "Precision is poetic when it moves electrons."
