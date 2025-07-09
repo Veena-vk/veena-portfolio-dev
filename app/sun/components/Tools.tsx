@@ -25,25 +25,16 @@ export default function Tools() {
         Part of <span className="font-medium text-zinc-800 dark:text-zinc-200">Sangamam</span> — a confluence of all my HDL efforts. Each project is a <em>thuli</em> (துளி) — a drop — and <strong>Aazhi</strong> (ஆழி) represents the ocean they form together.
       </p>
 
-      <div className="space-y-10">
-        {/* HDL IDE */}
-        <div className="border rounded-2xl p-5 bg-white dark:bg-zinc-900 shadow-sm">
-          <div className="mb-3">
-            <h3 className="text-xl font-bold">⚙️ HDL IDE</h3>
-            <p className="text-sm text-muted-foreground mt-1">
-              A lightweight development environment tailored for HDL design. Built with Electron + Monaco,
-              and supports Yosys-based flows. Basic UI layout is scaffolded — file explorer, editor, status bar, and console views are in place.
-            </p>
-          </div>
+      <section className="space-y-10">
+        <div>
+          <h3 className="text-xl font-bold text-yellow-800">⚙️ HDL IDE</h3>
+          <p className="text-muted-foreground mt-2">
+            A lightweight HDL development environment built with Electron and Monaco. It supports
+            Yosys-based flows, with a project-aware layout featuring editor tabs, console views, and
+            status bar. Basic UI scaffolding is complete.
+          </p>
 
-          <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-            <li>Tabbed editor with syntax highlighting</li>
-            <li>Project-aware file tree</li>
-            <li>Terminal, Lint View, Simulation tabs</li>
-            <li>Status bar and mode toggle (planned)</li>
-          </ul>
-
-          <div className="mt-6">
+          <div className="mt-4">
             <h4 className="font-medium text-base mb-2">🖼️ Gallery</h4>
             <div className="relative w-full max-w-xl mx-auto">
               <Image
@@ -68,37 +59,26 @@ export default function Tools() {
             </div>
           </div>
 
-          <div className="mt-4">
+          <p className="mt-4">
             <Link href="https://github.com/veenavijay/hdl-ide" target="_blank" className="text-blue-600 underline">
               View Project
             </Link>
-          </div>
+          </p>
         </div>
 
-        {/* Aazhi IP Library */}
-        <div className="border rounded-2xl p-5 bg-white dark:bg-zinc-900 shadow-sm">
-          <div className="mb-3">
-            <h3 className="text-xl font-bold">🌊 Aazhi IP Library</h3>
-            <p className="text-sm text-muted-foreground mt-1">
-              A curated collection of reusable RTL modules and testbench components written in
-              Verilog/SystemVerilog.
-            </p>
-          </div>
-
-          <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-            <li>Common RTL blocks: counters, LFSRs, timers</li>
-            <li>DSP primitives: test pattern generators, filters</li>
-            <li>Test utilities: streamers, assertions, scoreboards</li>
-            <li>Written to support both standalone and SoC-level designs</li>
-          </ul>
-
-          <div className="mt-3">
+        <div>
+          <h3 className="text-xl font-bold text-yellow-800">🌊 Aazhi IP Library</h3>
+          <p className="text-muted-foreground mt-2">
+            A growing sea of reusable RTL and verification modules. From counters and streamers to
+            test pattern generators, Aazhi is designed to plug into SoCs or act as standalone utilities.
+          </p>
+          <p className="mt-1">
             <Link href="https://github.com/veenavijay/aazhi" target="_blank" className="text-blue-600 underline">
               Explore Aazhi
             </Link>
-          </div>
+          </p>
         </div>
-      </div>
+      </section>
     </section>
   );
 }
