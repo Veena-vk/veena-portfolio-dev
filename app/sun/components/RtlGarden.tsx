@@ -70,7 +70,7 @@ function ProjectCard({ project }: { project: any }) {
           <p>
             <strong>🧠 RTL Design:</strong> {project.designNotes}
           </p>
-          {project.rtlLink && (
+          {project.status === "Full Bloom" && project.rtlLink && (
             <p>
               <strong>📂 RTL Gist / GitHub:</strong>{" "}
               <a
