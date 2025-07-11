@@ -20,7 +20,7 @@ export const rtlGarden = [
     description: "Counts syllable pulses across 3 lines to validate 5-7-5 haiku structure.",
     origin: "Inspired by Japanese haiku structure and syllable metering.",
     designNotes: "Implements a 3-line FSM to count syllables and assert a haiku-valid output.",
-    rtlLink: "https://gist.github.com/veenavijay/haiku",
+    rtlLink: "https://gist.github.com/Veena-vk/09052f234ff33d3da72f87aaf6fff0a0",
     reflection: "Explored how FSMs can be symbolic in artistic contexts too."
   },
 
