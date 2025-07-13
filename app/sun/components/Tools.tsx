@@ -20,7 +20,7 @@ export default function Tools() {
 
   return (
     <section className="mt-12">
-      <h2 className="text-2xl font-semibold text-yellow-700 mb-4">🛠️ Tools & Utilities</h2>
+      <h2 className="text-2xl font-semibold text-yellow-700 mb-4"> Tools & Utilities</h2>
       <p className="text-muted-foreground mb-6">
         Part of <span className="font-medium text-zinc-800 dark:text-zinc-200">Sangamam</span> — a confluence of all my HDL efforts. Each project is a <em>thuli</em> (துளி) — a drop — and <strong>Aazhi</strong> (ஆழி) represents the ocean they form together.
       </p>

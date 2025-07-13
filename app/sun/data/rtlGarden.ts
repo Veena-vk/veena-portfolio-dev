@@ -9,7 +9,7 @@ export const rtlGarden = [
     description: "A cycle-based productivity timer with FSM-driven work/rest periods.",
     origin: "Based on the Pomodoro Technique for time management, reimagined as a state machine.",
     designNotes: "Uses a basic counter + FSM to alternate between work and break cycles.",
-    rtlLink: "https://gist.github.com/veenavijay/pomodoro",
+    rtlLink: "https://gist.github.com/Veena-vk/675f60630ddce625f68fd9dfcaa19eaf",
     reflection: "Taught me how to use modular FSMs with time counters in clean control logic."
   },
   {
@@ -28,7 +28,7 @@ export const rtlGarden = [
   {
     id: "conway-life",
     title: "Conway's Game of Life",
-    rarity: "Tended Bloom 🌿",
+    rarity: "Tended Bloom 🌷",
     status: "Sapling 🌿",
     description: "Models cellular automaton evolution using grid memory and neighbor logic.",
     origin: "Based on Conway’s rules of life from mathematics and computer science.",
@@ -39,7 +39,7 @@ export const rtlGarden = [
   {
     id: "eclipse-predictor",
     title: "Eclipse Predictor",
-    rarity: "Tended Bloom 🌿",
+    rarity: "Tended Bloom 🌷",
     status: "Sapling 🌿",
     description: "Models celestial alignments to predict solar and lunar eclipses using minute-level phase tracking.",
     origin: "Inspired by ancient eclipse prediction techniques and orbital math.",
@@ -50,7 +50,7 @@ export const rtlGarden = [
   {
     id: "binary-star-dance",
     title: "Binary Star Dance",
-    rarity: "Tended Bloom 🌿",
+    rarity: "Tended Bloom 🌷",
     status: "Seeded 🌱",
     description: "Visualizes the orbit of two stars around a barycenter with real-time position logic.",
     origin: "Inspired by binary star motion in astronomy.",
@@ -60,7 +60,7 @@ export const rtlGarden = [
   {
     id: "helio-centric-system",
     title: "Helio Centric System",
-    rarity: "Tended Bloom 🌿",
+    rarity: "Tended Bloom 🌷",
     status: "Seeded 🌱",
     description: "Models the inner solar system orbiting the sun using period-accurate cycles.",
     origin: "Built on early heliocentric models of Copernicus and Kepler’s laws.",

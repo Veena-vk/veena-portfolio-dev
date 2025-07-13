@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function RtlGarden() {
   return (
     <section className="mt-12">
-      <h2 className="text-2xl font-semibold text-yellow-700 mb-4">🌿 RTL Garden</h2>
+      <h2 className="text-2xl font-semibold text-yellow-700 mb-4"> RTL Garden</h2>
       <p className="text-muted-foreground mb-6">
         A curated collection of creative RTL modules — each exploring logic, nature, and abstraction.
       </p>
@@ -28,7 +28,7 @@ function ProjectCard({ project }: { project: any }) {
   const rarityClass = project.rarity.includes("Wildflower")
     ? "bg-amber-50 text-amber-700"
     : project.rarity.includes("Tended Bloom")
-    ? "bg-lime-50 text-lime-700"
+    ? "bg-orange-50 text-orange-700"
     : project.rarity.includes("Hybrid")
     ? "bg-purple-100 text-purple-700"
     : "bg-pink-100 text-pink-700";

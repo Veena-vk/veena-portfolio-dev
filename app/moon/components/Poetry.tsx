@@ -5,7 +5,7 @@ import { useState } from 'react';
 const poems = [
   {
     id: 'venpatchi',
-    title: 'யாவையும் அல்லையும்',
+    title: 'Sky - a Conversation with a white Bird',
     snippet: 'நான் :  வெண்பட்சியே! என் சொப்பனங்களின் உருவே!...',
     tamil: `நான் :  வெண்பட்சியே ! என் சொப்பனங்களின் உருவே! 
 		    தும்பைப்பூ வண்ணச் சிறகுகள் வீசி, நீல வானில் மிதக்கும் காகித ஓடமே! 
@@ -165,7 +165,7 @@ And in perfect darkness, may my soul be filled.`
   },
   {
     id: 'timePause',
-    title: 'கணநேர ஞானம்',
+    title: 'A moment of wisdom',
     snippet: 'லௌகீக சஞ்சரிப்பில் தன்னை... காலமே, ஓய்வெடுப்பாயாக',
     tamil: `லௌகீக சஞ்சரிப்பில் தன்னை 
 	   எங்கோ தொலைத்து விட்ட மனம்
