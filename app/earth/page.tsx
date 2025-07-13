@@ -5,7 +5,7 @@ import OuchSection from "./components/SetbackSection";
 import CrackpotSection from "./components/CrackpotSection";
 import SandBackground from  "./components/SandBackground";
 import WaveDivider from "./components/WaveDivider";
-import HotchHiker from "./components/HitchHiker";
+import HitchHiker from "./components/HitchHiker";
 export default function EarthPage() {
   return (
     <SandBackground>
