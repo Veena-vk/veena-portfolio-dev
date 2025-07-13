@@ -10,7 +10,23 @@ export default function RtlGarden() {
     <section className="mt-12">
       <h2 className="text-2xl font-semibold text-yellow-700 mb-4"> RTL Garden</h2>
       <p className="text-muted-foreground mb-6">
-        A curated collection of creative RTL modules — each exploring logic, nature, and abstraction.
+       RTL is the language of logic — and logic is everywhere. From the ticking of a clock to the orbits of planets, logic governs the universe in silent precision.
+
+Being an RTL engineer is more about understanding than coding. The deeper I understand something, the more faithfully I can describe it in a hardware description language.
+
+The modules here are not always practical, but they are intentional. They are exercises in reproducing thought — how much of an idea I can translate into pure logic.
+
+These designs are abstract. They may not end up on a silicon wafer, but they’ve already shaped the way I think.
+
+My RTL Garden has different types of flowers:
+
+🌼 Common Wildflower – Simple, essential designs like timers, counters, and basic FSMs. Ubiquitous in the digital world, yet always elegant — like dandelions that grow everywhere, humble but vital.
+
+🌷Tended Bloom – Complete and functional modules such as VGA controllers, UARTs, or pattern generators. These are cultivated with care, grounded in both creativity and usefulness.
+
+🪻Architect’s Hybrid – Carefully engineered systems that explore structure and modularity: pipelined processors, configurable IPs, or protocol engines. These reflect deliberate architecture and scalable thought.
+
+🌸Rare Orchid – Experimental, poetic, or conceptually deep designs. Whether it's a Kolam generator, Sudoku solver, or audio-reactive FSM — these bloom in unexpected ways, shaped more by curiosity than necessity.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
