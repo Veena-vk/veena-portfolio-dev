@@ -5,7 +5,7 @@ import OuchSection from "./components/SetbackSection";
 import CrackpotSection from "./components/CrackpotSection";
 import SandBackground from  "./components/SandBackground";
 import WaveDivider from "./components/WaveDivider";
-
+import HotchHiker from "./components/HitchHiker";
 export default function EarthPage() {
   return (
     <SandBackground>
@@ -22,6 +22,7 @@ export default function EarthPage() {
       <ThoughtTrailsSection />
       <OuchSection />
       <CrackpotSection />
+      <HitchHiker />
     </main>
     <WaveDivider position="bottom" withFoam />
     </SandBackground>
