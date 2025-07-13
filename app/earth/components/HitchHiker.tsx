@@ -10,7 +10,7 @@ const HitchHiker = () => {
         className="w-full h-[80vh] rounded-xl shadow-md border border-gray-200"
         allowFullScreen
       ></iframe>
-    </div>
+   </Section>
   );
 };
 
