@@ -9,25 +9,50 @@ export default function RtlGarden() {
   return (
     <section className="mt-12">
       <h2 className="text-2xl font-semibold text-yellow-700 mb-4"> RTL Garden</h2>
-      <p className="text-muted-foreground mb-6">
-       RTL is the language of logic — and logic is everywhere. From the ticking of a clock to the orbits of planets, logic governs the universe in silent precision.
-
-Being an RTL engineer is more about understanding than coding. The deeper I understand something, the more faithfully I can describe it in a hardware description language.
-
-The modules here are not always practical, but they are intentional. They are exercises in reproducing thought — how much of an idea I can translate into pure logic.
-
-These designs are abstract. They may not end up on a silicon wafer, but they’ve already shaped the way I think.
-
-My RTL Garden has different types of flowers:
-
-🌼 Common Wildflower – Simple, essential designs like timers, counters, and basic FSMs. Ubiquitous in the digital world, yet always elegant — like dandelions that grow everywhere, humble but vital.
-
-🌷Tended Bloom – More complete designs that take effort to nurture  such as Conway's Game of Life and Eclipse Predictor. These are cultivated with care, grounded in both creativity and maybe little bit usefulness.
-
-🪻Architect’s Hybrid – Carefully engineered systems that explore structure and modularity: Sudoku solver,  maze runners etc. These reflect deliberate architecture and scalable thought.
-
-🌸Rare Orchid – Experimental, poetic, or conceptually deep designs. Whether it's a Kolam generator, or audio-reactive FSM — these bloom in unexpected ways, shaped more by curiosity than necessity.
+      <div className="prose prose-lg max-w-3xl mx-auto px-4 py-8">
+      <p>
+        <strong>RTL is the language of logic — and logic is everywhere.</strong>{' '}
+        From the ticking of a clock to the orbits of planets, logic governs the universe in silent precision.
       </p>
+
+      <p>
+        Being an RTL engineer is more about understanding than coding. The deeper I understand something, the more
+        faithfully I can describe it in a hardware description language.
+      </p>
+
+      <p>
+        The modules here are not always practical, but they are intentional. They are exercises in reproducing thought —
+        how much of an idea I can translate into pure logic.
+      </p>
+
+      <p>
+        These designs are abstract. They may not end up on a silicon wafer, but they’ve already shaped the way I think.
+      </p>
+
+      <h2 className="mt-8 mb-4 text-xl font-semibold">🌼 My RTL Garden has different types of flowers:</h2>
+
+      <ul className="list-none space-y-4">
+        <li>
+          <span className="font-medium">🌼 Common Wildflower</span> – Simple, essential designs like timers, counters, and basic FSMs.
+          Ubiquitous in the digital world, yet always elegant — like dandelions that grow everywhere, humble but vital.
+        </li>
+
+        <li>
+          <span className="font-medium">🌷 Tended Bloom</span> – More complete designs that take effort to nurture, such as Conway's Game of Life
+          and Eclipse Predictor. These are cultivated with care, grounded in both creativity and maybe a little bit of usefulness.
+        </li>
+
+        <li>
+          <span className="font-medium">🪻 Architect’s Hybrid</span> – Carefully engineered systems that explore structure and modularity:
+          Sudoku solver, maze runners, etc. These reflect deliberate architecture and scalable thought.
+        </li>
+
+        <li>
+          <span className="font-medium">🌸 Rare Orchid</span> – Experimental, poetic, or conceptually deep designs. Whether it's a Kolam generator
+          or audio-reactive FSM — these bloom in unexpected ways, shaped more by curiosity than necessity.
+        </li>
+      </ul>
+    </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {rtlGarden.map((project) => (
