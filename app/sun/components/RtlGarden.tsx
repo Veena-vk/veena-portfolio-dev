@@ -22,11 +22,11 @@ My RTL Garden has different types of flowers:
 
 🌼 Common Wildflower – Simple, essential designs like timers, counters, and basic FSMs. Ubiquitous in the digital world, yet always elegant — like dandelions that grow everywhere, humble but vital.
 
-🌷Tended Bloom – Complete and functional modules such as VGA controllers, UARTs, or pattern generators. These are cultivated with care, grounded in both creativity and usefulness.
+🌷Tended Bloom – More complete designs that take effort to nurture  such as Conway's Game of Life and Eclipse Predictor. These are cultivated with care, grounded in both creativity and maybe little bit usefulness.
 
-🪻Architect’s Hybrid – Carefully engineered systems that explore structure and modularity: pipelined processors, configurable IPs, or protocol engines. These reflect deliberate architecture and scalable thought.
+🪻Architect’s Hybrid – Carefully engineered systems that explore structure and modularity: Sudoku solver,  maze runners etc. These reflect deliberate architecture and scalable thought.
 
-🌸Rare Orchid – Experimental, poetic, or conceptually deep designs. Whether it's a Kolam generator, Sudoku solver, or audio-reactive FSM — these bloom in unexpected ways, shaped more by curiosity than necessity.
+🌸Rare Orchid – Experimental, poetic, or conceptually deep designs. Whether it's a Kolam generator, or audio-reactive FSM — these bloom in unexpected ways, shaped more by curiosity than necessity.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
