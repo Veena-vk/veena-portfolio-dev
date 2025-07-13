@@ -73,7 +73,7 @@ export default function Tools() {
             test pattern generators, Aazhi is designed to plug into SoCs or act as standalone utilities. Planned for implementing as plug-ins to my IDE.
           </p>
           <p className="mt-1">
-            <Link href="https://github.com/veenavijay/aazhi" target="_blank" className="text-blue-600 underline">
+            <Link href="https://github.com/Veena-vk/aazhi-ip-lib.git" target="_blank" className="text-blue-600 underline">
               Explore Aazhi
             </Link>
           </p>
