@@ -58,12 +58,6 @@ export default function Tools() {
               </button>
             </div>
           </div>
-
-          <p className="mt-4">
-            <Link href="https://github.com/veenavijay/hdl-ide" target="_blank" className="text-blue-600 underline">
-              View Project
-            </Link>
-          </p>
         </div>
 
         <div>

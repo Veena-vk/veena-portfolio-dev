@@ -193,7 +193,266 @@ O endless day... O unfinished night...
 The blooming wave called desire recedes.
 Let this moment of knowing remain undisturbed—
 O Time, pause a while. Rest, just for now.`
-  }
+  },
+
+{
+    id: 'Peopleapoem',
+    title: 'People, a piece of art',
+    snippet: 'பிழைக்க வழி தேடி வாழ்வை விரட்டுகையில்... இலக்கிய கவிதைகளாகி போகின்றனர்',
+    tamil: `பிழைக்க வழி தேடி வாழ்வை விரட்டுகையில்
+தொலைந்து போன என் இலக்கிய ரசனைகள்
+சொற்ப காலமாய் மீட்டெடுப்பதென்னவோ
+சற்று நேரம் நான் கடக்கும் மானுடர்கள்
+
+அன்றலர்ந்த புது மலர் காண்கையில்
+உள்ளமும் மெல்லென விரிதற்போல்
+அன்பில் நிறைந்த மக்கள் மொழியில்
+கனிந்து கண்களும் பனிக்கிறது
+
+கண்டறியப்பட்ட பல்வேறு நிறமாலைகளில்
+பார்க்க முடிந்தது மட்டுமே பல வண்ணங்கள்
+கருப்பு வெள்ளை என்று இரண்டு சாயங்கள்
+மனித மனங்களுக்கு மட்டும் போதுமா என்ன
+
+காதலும் கோபமும் வாஞ்சையும் விரக்தியும்
+நாணமும் காமமும் வலியும் வெறுப்பும்
+ உணர்வுகளின் வண்ணப்படங்களாய்
+இலக்கிய கவிதைகளாகி போகின்றனர்`,
+    english: `In the hustle of earning for living
+The dying flames of my poetic pleasures
+Gets fueled from people I come across
+Possibly for only a brief moment though
+
+A fresh morning rose, a perfect sip of coffee
+Fragrance of rainy soil, a romantic musical piece
+The Perception of senses, if they are capable
+Of turning into literature, why not humans? 
+
+Among the known vast band of spectrum
+Even visible range of colors are many
+Then how could it be rational to classify
+Intricate human minds as black or white
+
+Happiness, sorrow, struggles and pain, 
+Anger, compassion, love and lust, 
+People are what these made them into
+A salad bowl of complex emotions
+
+When they express themselves to me, 
+I get excited, I watch them in awe. 
+Deeds can be good, deeds can be bad, 
+But people remain as they are,  a piece of art`
+  },
+{
+    id: 'Lovelikethorn',
+    title: 'Love, like a thorn',
+    snippet: 'வேனில் முடிந்து கார்காலம் துவங்க... வெளியேறியது காதல் மயக்கம்',
+    tamil: `வேனில் முடிந்து கார்காலம் துவங்க
+பருவம் எய்திய மகரந்த வனங்கள்
+தென்றல் தழுவலில் நெகிழ்ந்திருக்க
+தோழியரோடு மலர்கொய்ய சென்றேன்
+விரிந்த இதழ்களில் தான் எத்துணை வண்ணங்கள்
+வண்ணங்கள்... வெட்கங்களின் விதங்களோ
+இவ்வெட்கங்களை ஒன்றாக தொடுத்து 
+வாசத்தையும் வாடகைக்கு பெற்று
+காதல் கைகூட கூந்தலில் சூட்டிக் கொண்டிருந்தனர்
+உடன் வந்த என் உயிர் சிநேகிதிகள்
+நான் மட்டும் இங்கே வேற்றானவள்
+வேடிக்கை மட்டும் பார்க்க வந்தவள்
+கண்களில் அப்போது தென்பட்டது 
+தரையோடுப் படர்ந்திருந்த சிறுநெருஞ்சி
+அந்தி மஞ்சள் மலர் ஆளான சேதி சொன்ன போதும்
+வாடைக்கு அதை தீண்ட மனமில்லை
+புதர் மண்டிச் செழித்த செடிகள் தாம் சல்லாபத்திற்கு உகந்ததோ, யாரறிவர்
+என்போல் அன்பிற்காய் ஏங்கி
+பரிதாபமாக தென்பட்ட அதனை
+பரிவுடன் கையிலெடுத்தேன் 
+கூர்மை கையினை கிழிக்க
+குருதியுடன் கூடவே வெளியேறியது
+காதல் மயக்கம்....`,
+    english: `As summer ended and monsoon began,
+The honey-sweet groves had come of age.
+Swaying in the breeze, stirred to bloom,
+I went flower-picking with my friends.
+
+How many hues lay hidden
+In those wide-spread petals —
+Colors... perhaps shades of shyness itself?
+
+They gathered those timid blushes,
+Tied them into garlands of fragrance,
+And wore love in their hair —
+My soul-sisters, vibrant and alive.
+
+But I — I was different.
+A stranger there.
+Just a witness to the scene.
+And then I saw it...
+
+A tiny thorny plant crawling along the soil.
+Even when its yellow blossom
+Had already claimed its moment —
+I couldn’t bring myself to touch it.
+
+Who knows which shrubs,
+growing wild and dense,
+Are suited for conversation?
+
+It looked like me —
+Longing, unloved, pitiable.
+Moved by that, I reached for it gently...
+
+But its sharp thorns tore my palm.
+And with the blood that trickled out —
+Came the dizziness of love.`
+  },
+  {
+    id: 'afterrain',
+    title: 'After the Rain',
+    snippet: 'சாமம் மூன்றான பொழுது... என்னோடு காதல் புரிய  வாராய்',
+    tamil: `சாமம் மூன்றான பொழுது அது
+மழை பெய்து ஓய்ந்திருந்தது 
+காமம் முடிந்து தரும் முத்தமென
+மெல்லமாய் சின்ன சாரல் மட்டும்
+
+வெளியே வா வீதிவரை செல்வோம்
+வான்நீர் விழுந்து கழுவித் துடைத்த
+பளிங்கென மின்னும் தார்சாலை
+கால் பதித்து நாம் வலம் வருவோம்
+
+மரங்களிடம் காதல் கதை கேட்டபடி வா
+நிலவொளி கலந்த நீரில் நனைந்தபடி
+பரவசமாகி தேகம் சிலிர்ப்பதைக் காண்
+வெள்ளி உருகி ஊற்றும் வெட்கம் காண்
+
+மண்ணோடு மலர் மணம் நுகர்ந்தவாறே
+காற்றோடு நம் கரங்கள் கோர்த்திருக்க
+விண்ணோடு நிலவு கூடி விளையாட
+என்னோடு காதல் புரிய  வாராய் `,
+    english: `It was the hour of the third twilight,
+The rain had just ceased —
+Like a kiss that lingers after passion,
+A soft drizzle remained, gently falling.
+
+Come with me, let’s walk to the street,
+The road washed clean by falling skies,
+Glistens like polished crystal —
+Let’s wander, leaving quiet footprints.
+
+Come hear the trees whisper their love stories,
+As moonlight dances on the wet puddles,
+Feel your skin shiver in quiet ecstasy,
+See how even silver melts in shy surrender.
+
+Let’s breathe the scent of earth and fresh blossoms,
+Let the breeze entwine our fingers,
+Let the moon play with the sky and stars,
+And you — come love me beneath it all.`
+  },
+{
+    id: 'unapolegeticlove',
+    title: 'Come, Let Us Love Like the First Humans',
+    snippet: 'பகலெல்லாம் மேல் பொழிந்த அனலெல்லாம்... இரவு ஒன்றல்ல பலவும் காத்திருக்கிறது',
+    tamil: `பகலெல்லாம் மேல் பொழிந்த அனலெல்லாம்
+மார்கழிப் பனி மீறி மனதிற்குள் காந்துகிறது 
+வெளிச்சப் போர்வையில் ஒளிந்திருந்த நிஜமெல்லாம்
+நிர்வாண இருளில் இங்கே   வேர்விட்டு வளர்கிறது
+அரவணைக்க அருகே உறவொன்று 
+இருக்கையில்
+பரிதவிப்பை புறக்கணிக்க காரணம் உண்டோ
+சுவர்கள் வேண்டாம் கூரையும் வேண்டாம்
+கட்டிலும் மெத்தையும் கூட காமத்துக்கு வேண்டாம் 
+ஆளரவமற்ற வெளியில் அர்த்த சந்திரன் சாட்சியில்
+ஆதி மனிதன் காலத்து காதல் பழக வா
+என் மேனியழகைக் இமைக்காது காண்
+ஆங்காங்கு படிந்து கிடக்கும் கருந்திட்டுக்களும் காண்
+என் நிறை குறைகள் அத்தனையும் மறைக்காது பார்
+உன் வெட்கத்தை வாசலில் வைத்து விடு
+ தயங்காது உன்னை என் வசம் ஒப்படைக்க வா
+மெய்யான இன்பமிதில் இருவரும் இணைத்துக்கொள்ள 
+இரவு ஒன்றல்ல பலவும் காத்திருக்கிறது`,
+    english: `All the heat poured on me through the day
+Now clings to my heart, defying even the chill of Margazhi frost.
+Truths once hidden beneath layers of light
+Now take root and grow — in the nude dark.
+
+When a warm love sits close enough to hold,
+Is there any reason to resist this ache?
+
+We need no walls, no roofs —
+Not even a bed or a mattress for desire to rise.
+In this open, echo-less space, beneath the witness of a half-moon,
+Come — let us love like ancient humans once did.
+
+Look upon my bare body without blinking.
+See the scattered dark patches that rest upon it.
+See me whole — do not let your eyes skip my flaws.
+
+Leave your shyness at the doorstep.
+Come to me without hesitation, surrendering yourself —
+In this true union of bliss,
+Know that not just this night — but many nights await us.`
+  },
+
+{
+    id: 'whathaveyoudone',
+    title: 'What have you done to me',
+    snippet: 'உலகமெலாம் சுதந்திரமாய் சுற்ற விரும்பியவள்... என்ன செய்து விட்டாய் என்னை',
+    tamil: `என்ன செய்து விட்டாய் என்னை...
+
+உலகமெலாம் சுதந்திரமாய் சுற்ற விரும்பியவள்- இன்று
+உன் கைச் சிறையில் யுக யுகமாய் சிக்குண்டு கிடக்க ஆசை கொள்வதேன்
+
+சரச பார்வையில் என்னை சாகடித்து விடுகிறாய் -
+இரவில் மட்டும் விடைபெற்று கொள்கின்றன என் காந்தியக் கொள்கைகள்
+
+அச்சமும் நாணமும் நாய்கட்கென
+முழங்கியவள்-இன்று உன் கோபம் கண்டு கண்ணீர் பெருக பேசா மடந்தையாகி நிற்கின்றேன் விந்தையிலும் விந்தை தான்
+
+ஊடல் ஆயிரம் வந்த போதும்
+உனக்காய் ஏங்குகிறது பேதை மனம் - அனலிட்ட பனியாய் உடனே தொலைந்து விடுகிறது 
+நான் கொண்ட சினம்
+
+எனக்கு என்ன தான் நிகழ்ந்து கொண்டிருக்கிறது - எது என்னை என் இயல்பிலிருந்து துரத்தி எதிர் திசையில் ஓட செய்கின்றது
+
+
+விலக இயலாத கட்டுண்ட பந்தத்தில் விருப்பம் கொள்கிற அடிமை பெண் நானல்ல - நீ தான் தந்திரம் புரிந்து என்னை வென்றிருக்கிறாய்
+
+சொல்.....
+என்ன செய்து விட்டாய் என்னை..`,
+    english: `Once, I longed to roam the world in freedom —
+But today, I crave to lie caged in your clasping hands,
+For ages and ages — why?
+
+Your flirtatious gaze slays me silently,
+And by night, even my Gandhian ideals quietly leave me.
+
+I once thundered that fear and shame
+Were emotions fit only for dogs —
+Yet now, seeing your anger, I stand silent,
+Tears flowing, transformed into a meek maiden.
+A wonder within a wonder.
+
+Even after a thousand quarrels,
+This foolish heart yearns for you still —
+And the fire of my anger?
+It vanishes instantly like melting frost.
+
+What is happening to me?
+What force is dragging me
+From my own nature, pushing me to run in reverse?
+
+This bondage — I never wished for,
+And yet here I am, a willing captive.
+But know this:
+I am not the slave woman — you are the one
+Who played the trick, and won me.
+
+So tell me...
+What have you done to me?`
+  },
+
+
 ];
 
 export default function MoonPetals() {
