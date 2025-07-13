@@ -9,7 +9,7 @@ export default function RtlGarden() {
   return (
     <section className="mt-12">
       <h2 className="text-2xl font-semibold text-yellow-700 mb-4"> RTL Garden</h2>
-      <div className="prose prose-lg max-w-3xl mx-auto px-4 py-8">
+      <div className="prose prose-lg px-4 py-8">
       <p>
         <strong>RTL is the language of logic — and logic is everywhere.</strong>{' '}
         From the ticking of a clock to the orbits of planets, logic governs the universe in silent precision.
