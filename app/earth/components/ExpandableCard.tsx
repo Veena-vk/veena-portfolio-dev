@@ -13,19 +13,21 @@ export default function ExpandableCard({ title, content, details }: Props) {
 
   return (
     <div
-      className="bg-neutral-700/40 border border-neutral-600 p-5 rounded-xl cursor-pointer hover:bg-neutral-700 transition"
+      className="bg-[#59200F] p-5 rounded-xl text-white shadow-md max-w-xl cursor-pointer transition border border-[#76301A]/50"
       onClick={() => setOpen(!open)}
     >
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold">{title}</h3>
-        <span className="text-sm text-gray-300">{open ? "–" : "+"}</span>
+        <span className="text-sm text-[#F4E8D2]">
+          {open ? "Collapse" : "Expand"}
+        </span>
       </div>
 
-      <p className="mt-2 text-gray-300">{content}</p>
+      <p className="text-sm text-orange-100 mt-2">{content}</p>
 
       {open && (
         <div
-          className="mt-4 text-gray-200 text-sm leading-relaxed space-y-3"
+          className="mt-4 text-[#F4E8D2] text-sm leading-relaxed space-y-3"
           dangerouslySetInnerHTML={{ __html: details }}
         />
       )}
