@@ -1,7 +1,7 @@
 export interface CrackpotItem {
   title: string;
   content: string;
-  details?: string; // for expandable sections
+  details: string; // for expandable sections
 }
 
 export const crackpotItems: CrackpotItem[] = [
