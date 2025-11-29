@@ -1,6 +1,7 @@
 // components/CrackpotSection.tsx
 import React from "react";
 import Card from "./Card";
+import ExpandableCard from "./ExpandableCard";
 import Section from "./Section";
 import { crackpotItems } from "./CrackpotFiles";
 
