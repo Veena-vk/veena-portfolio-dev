@@ -1,55 +1,22 @@
-"use client";
-
-import { useState } from "react";
-
-export default function CrackpotFiles() {
-  const [expanded, setExpanded] = useState(false);
-
-  return (
-    <div className="space-y-6">
-      <div
-        className="cursor-pointer bg-neutral-700/50 p-5 rounded-lg border border-neutral-600 hover:bg-neutral-700 transition"
-        onClick={() => setExpanded(!expanded)}
-      >
-        <div className="flex justify-between items-center">
-          <h3 className="text-xl font-semibold">
-            🧠 Mind: The Time-Travelling Entity
-          </h3>
-          <span className="text-sm text-gray-400">{expanded ? "Collapse" : "Expand"}</span>
-        </div>
-
-        <p className="mt-2 text-gray-300">
-          Can the brain — with memory and prediction — be considered a time-travelling mechanism?
-        </p>
-
-        {expanded && (
-          <div className="mt-4 text-gray-200 space-y-4 text-sm leading-relaxed">
-            <p>
-              The classical notion of mind–body dualism — that the mind exists independently of the
-              body — has long been challenged. Modern neuroscience reveals that what we experience
-              as “mind” is deeply rooted in the structure of the brain itself.
-            </p>
-
-            <p>
-              Damage to specific regions of the brain — like the frontal lobe or hippocampus —
-              alters personality, memory, and identity. The “self” is not a separate soul; it’s
-              emergent from neural circuitry.
-            </p>
-
-            <p>
-              Yet this neural machine isn’t bound to the present. It recalls the past through
-              memory, and projects possible futures through imagination and predictive modeling.
-              These temporal leaps allow the mind to simulate timelines far beyond the now.
-            </p>
-
-            <p>
-              In that sense, the brain behaves like a subjective time machine — folding moments into
-              memory, extending seconds into thought, and leaping across experience in nonlinear
-              ways.
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+export interface CrackpotItem {
+  title: string;
+  content: string;
+  details?: string; // for expandable sections
 }
+
+export const crackpotItems: CrackpotItem[] = [
+  {
+    title: " Mind: The Time-Travelling Entity",
+    content: "Can the brain — with memory and prediction — be considered a time-travelling mechanism?",
+    details: `
+    <p> The classical notion of mind–body dualism — that the mind exists independently of the body — has long been challenged. Modern neuroscience reveals that what we experience as “mind” is deeply rooted in the structure of the brain itself. </p> <p> Damage to specific regions of the brain — like the frontal lobe or hippocampus — alters personality, memory, and identity. The “self” is not a separate soul; it’s emergent from neural circuitry. </p> <p> Yet this neural machine isn’t bound to the present. It recalls the past through memory, and projects possible futures through imagination and predictive modeling. These temporal leaps allow the mind to simulate timelines far beyond the now. </p> <p> In that sense, the brain behaves like a subjective time machine — folding moments into memory, extending seconds into thought, and leaping across experience in nonlinear ways. </p>
+    `
+  },
+  {
+    title: "The Act of Computing — and Computing Machines",
+    content: "What if computation is nothing but nature seeking balance?",
+    details: `
+   <p> What is computing, really?</p> <p> At its heart, computing is anything that produces an output from a given set of inputs. But I like to interpret it more intuitively: computing is the act of creating balance — or reaching a point of stability — from an imbalanced or biased state. In the physical world, most machines behave this way. You apply a bias — a voltage, a force, a torsion — and the system responds by adjusting itself, eventually stabilizing at an outcome. The accuracy of this outcome depends on how intentionally we introduce that imbalance, and how well we understand the framework the system operates within.</p> <p> ⚙️ Our Frameworks Define the Problem</p> <p> We build models — theoretical frameworks — to understand the physical systems we compute with. The strength and validity of these frameworks determine how complex our computational problems feel. Take something simple: multiplication. You have a table for single-digit numbers — so you extend it to multiply bigger ones. In this model, the computer is just a slave. The mind behind the computation is still yours. It’s deterministic. But as we move into harder territory, problems begin to fall into two fascinating categories: </p> <p>🧮 1. The Problem of Big Numbers </p> <p>Take RSA cryptography. At its core, it’s just multiplying two large prime numbers — something a schoolkid could conceptually do. Yet it becomes intractable at large scale. Why? Not because we don’t understand multiplication — but because the numbers are enormous, and our systems weren’t built for that kind of weight. </p> <p>🎲 2. The Problem of Uncertainty </p> <p>Some problems lack a deterministic model. We can’t compute an exact result — only the best chance of one. These are the kinds of problems where classical machines struggle, because they're too obedient. </p> <p>⚛️ Why Quantum Computing Is So… Different</p> <p> Here’s where quantum machines start to feel revolutionary — even philosophical. </p> <p>🌌 1. Probability as a Feature</p> <p> In uncertain problems, obedient machines fail us. We need machines that exhibit free will — or at least the illusion of it. Quantum particles are inherently probabilistic. They’re not guessing. They are the probability. So when we evaluate fuzzy models, quantum machines become natural solvers, not brute-force followers. This reminds me of the Lagrangian model in physics: The particle takes the path that minimizes total action — the path of least effort. Is this not computation too? Is the universe just constantly computing its own least-action path? </p> <p>⌛ 2. Time — The Chaotic Culprit </p> <p> In relativity, time isn’t straight. It stretches, bends, loops. Yet we define computational complexity as the number of time-steps a process needs. What if there were a way to bypass time? To find a wormhole for solutions, not through brute force but through nature’s shortcuts? Classical machines can’t do that. But quantum ones? Maybe. Just maybe.
+    `
+  }
+];

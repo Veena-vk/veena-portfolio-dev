@@ -2,13 +2,22 @@
 import React from "react";
 import Card from "./Card";
 import Section from "./Section";
+import { crackpotItems } from "./CrackpotFiles";
 
 const CrackpotSection = () => (
-  <Section icon="🌀" title="Crackpot Corners" subtitle="Driftwood Theories">
-    <Card
-      title="Logic Gates from Plants?"
-      content="Can biology teach us to rethink the foundations of digital logic?"
-    />
+  <Section
+    icon="🌀"
+    title="Crackpot Corner"
+    subtitle="Driftwood Theories & Playful Speculation"
+  >
+    {crackpotItems.map((item, idx) => (
+      <ExpandableCard
+        key={idx}
+        title={item.title}
+        content={item.content}
+        details={item.details}
+      />
+    ))}
   </Section>
 );
 
