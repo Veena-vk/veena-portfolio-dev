@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+
+import { useState } from "react";
 
 interface Props {
   title: string;
@@ -7,26 +8,27 @@ interface Props {
   details: string;
 }
 
-const ExpandableCard: React.FC<Props> = ({ title, content, details }) => {
+export default function ExpandableCard({ title, content, details }: Props) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="p-4 rounded-xl border border-gray-300 shadow-md bg-white mb-4">
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full text-left"
-      >
-        <h2 className="text-xl font-semibold">{title}</h2>
-        <p className="text-gray-600">{content}</p>
-      </button>
+    <div
+      className="bg-neutral-700/40 border border-neutral-600 p-5 rounded-xl cursor-pointer hover:bg-neutral-700 transition"
+      onClick={() => setOpen(!open)}
+    >
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <span className="text-sm text-gray-300">{open ? "–" : "+"}</span>
+      </div>
+
+      <p className="mt-2 text-gray-300">{content}</p>
 
       {open && (
-        <div className="mt-3 text-gray-700 whitespace-pre-line">
-          {details}
-        </div>
+        <div
+          className="mt-4 text-gray-200 text-sm leading-relaxed space-y-3"
+          dangerouslySetInnerHTML={{ __html: details }}
+        />
       )}
     </div>
   );
-};
-
-export default ExpandableCard;
+}
